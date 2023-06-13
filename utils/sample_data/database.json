@@ -1,0 +1,21 @@
+{ 
+  "orders": {
+    "orderNumber": {
+    "orderName": "Michael's Order",
+    "itemsId": "[]",
+    "subTotal": "0",
+    "totalPrice": "100",
+    "timeStamp": "",
+    "paymentMethod": "Credit Card",
+    "orderType": "Delivery",
+    "tipAmount": "20",
+    "userId": "",
+    "isOpen": false
+    }
+  },
+  "items": {
+    "itemId": "[]",
+    "itemName": "Margherita Pizza",
+    "itemPrice": "100" 
+  }
+}
