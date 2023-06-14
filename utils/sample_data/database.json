@@ -1,0 +1,70 @@
+{
+  "items": {
+    "-NXrMQ6D6GUAFj8iqTER": {
+      "firebaseKey": "-NXrMQ6D6GUAFj8iqTER",
+      "itemName": "Sausage Pizza",
+      "itemPrice": "20"
+    },
+    "-NXrMlbREOJEhL18DJt-": {
+      "firebaseKey": "-NXrMlbREOJEhL18DJt-",
+      "itemName": "Cheese Pizza",
+      "itemPrice": "35"
+    },
+    "-NXrNbxUh7WaRQl2ueC_": {
+      "firebaseKey": "-NXrNbxUh7WaRQl2ueC_",
+      "itemName": "Chonkyfire: Jalapeno Pizza",
+      "itemPrice": "19.98"
+    },
+    "-NXrOO6o1sh1CYWXjvVN": {
+      "firebaseKey": "-NXrOO6o1sh1CYWXjvVN",
+      "itemName": "So Fresh and So Cream: Chicken Alfredo",
+      "itemPrice": "19.94"
+    }
+  },
+  "orders": {
+    "-NXrGSFFVxDRJdkPxFYl": {
+      "firebaseKey": "-NXrGSFFVxDRJdkPxFYl",
+      "isOpen": false,
+      "orderName": "Michael's Order",
+      "orderType": "Delivery",
+      "paymentMethod": "Credit Card",
+      "subTotal": "80",
+      "timeStamp": "06/13/2023",
+      "tipAmount": "20",
+      "totalPrice": "100"
+    },
+    "-NXrHikHUaPh_MRmxnNg": {
+      "firebaseKey": "-NXrHikHUaPh_MRmxnNg",
+      "isOpen": false,
+      "orderName": "Michael's Order",
+      "orderType": "Delivery",
+      "paymentMethod": "Credit Card",
+      "subTotal": "80",
+      "timeStamp": "may 06",
+      "tipAmount": "20",
+      "totalPrice": "100"
+    },
+    "-NXrImdJYvRvpQI2wSuA": {
+      "isOpen": false,
+      "orderName": "Michael's Order",
+      "orderType": "Delivery",
+      "paymentMethod": "Credit Card",
+      "subTotal": "80",
+      "timeStamp": "may 06",
+      "tipAmount": "20",
+      "totalPrice": "100"
+    },
+    "-NXrL0pH13Xz7oedhXdt": {
+      "isOpen": false,
+      "itemsId": "[]",
+      "orderName": "Michael's Order",
+      "orderType": "Delivery",
+      "paymentMethod": "Credit Card",
+      "subTotal": "0",
+      "timeStamp": "",
+      "tipAmount": "20",
+      "totalPrice": "100",
+      "userId": ""
+    }
+  }
+}
