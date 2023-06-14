@@ -1,3 +1,5 @@
+import renderToDom from '../../utils/renderToDom';
+
 const renderNavbar = (user) => {
   const navbarString = `
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -37,7 +39,7 @@ const renderNavbar = (user) => {
   </div>
 </nav>`;
 
-  return navbarString;
+  renderToDom('#navbar', navbarString);
 };
 
 export default renderNavbar;
