@@ -1,5 +1,4 @@
-import renderToDom from '../utils/renderToDom';
-// probably need to add a clearDom function //
+import renderToDom from '../../utils/renderToDom';
 
 const paymentForm = (obj = {}) => {
   const domString = `
