@@ -1,4 +1,5 @@
-import renderToDom from '../../utils/renderToDom';
+// eslint-disable-next-line import/no-unresolved
+import renderToDom from '../utils/renderToDOM';
 
 const domBuilder = () => {
   const domString = `
