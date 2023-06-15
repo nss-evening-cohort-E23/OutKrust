@@ -1,5 +1,4 @@
 import renderToDom from '../../utils/renderToDom';
-// probably need to add a clearDom function //
 
 const paymentForm = (obj = {}) => {
   const domString = `
