@@ -28,7 +28,7 @@ const renderNavbar = (user) => {
           </ul>
         </li>
         <li class="nav-item">
-          ${user.displayName}
+        <a class="nav-link" href="#">${user.displayName}</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
