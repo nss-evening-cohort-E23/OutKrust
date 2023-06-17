@@ -4,6 +4,7 @@ import renderNavbar from '../components/shared/navbar';
 import formLaunchers from '../events/formLaunchers';
 import homePageEvents from '../events/homePageEvents';
 import navbarEvents from '../events/navbarEvents';
+import searchEvents from '../events/searchEvents';
 import showHomePage from '../pages/homePage';
 
 const startApp = (user) => {
@@ -14,6 +15,7 @@ const startApp = (user) => {
   homePageEvents();
   formLaunchers();
   navbarEvents(user);
+  searchEvents();
 };
 
 export default startApp;
