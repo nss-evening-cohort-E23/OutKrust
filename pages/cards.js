@@ -11,7 +11,9 @@ const orderCards = (array) => {
         <h6 class="card-phone">${order.customer_phone}</h6>
         <h7 class="card-email">${order.customer_email}</h7>
         <h8 class="card-order-type">${order.order_type}</h8>
-        <a href="#" class="card-link" id="detail-entry--${order.order_number}">Create/Edit Order</a>
+        <a href="#" class="card-link" id="detail-entry--${order.order_number}">Detail</a>
+        <a href="#" class="card-link" id="update-entry--${order.order_number}">Edit</a>
+        <a href="#" class="card-link" id="delete-entry--${order.order_number}">Delete</a>
       </div>
     </div>
   `;
