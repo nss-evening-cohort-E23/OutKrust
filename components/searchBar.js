@@ -3,7 +3,8 @@ const searchBar = (array, searchTerm) => {
   array.forEach((obj) => {
     const objValueArray = Object.values(obj);
     objValueArray.forEach((value) => {
-      if (value.toUpperCase().includes(searchTerm.toUpperCase())) {
+      console.warn(value);
+      if (value.toString().toUpperCase().includes(searchTerm.toString().toUpperCase())) {
         if (searchArr.indexOf(obj) === -1) {
           searchArr.push(obj);
         }

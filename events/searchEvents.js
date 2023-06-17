@@ -2,15 +2,15 @@ import { getAllOrders } from '../api/orderData';
 import searchBar from '../components/searchBar';
 import showCards from '../pages/cards';
 
-const searchEvents = (user) => {
+const searchEvents = () => {
   document.querySelector('#app').addEventListener('click', (e) => {
     e.preventDefault();
 
     const searchValue = document.querySelector('#search-bar').value;
 
     if (e.target.id.includes('search-btn')) {
-      getAllOrders(user.uid)
-        .then((entries) => searchBar(entries, searchValue))
+      getAllOrders()
+        .then((orders) => searchBar(orders, searchValue))
         .then(showCards);
     }
   });
