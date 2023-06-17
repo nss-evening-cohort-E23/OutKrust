@@ -1,5 +1,5 @@
 import { getAllOrders } from '../api/orderData';
-import showCards from '../pages/cards';
+import orderCards from '../pages/cards';
 import showHomePage from '../pages/homePage';
 import { showRevenuePage } from '../pages/revenue';
 import renderToDom from '../utils/renderToDom';
@@ -20,7 +20,7 @@ const navbarEvents = (user) => {
     }
 
     if (e.target.id.includes('nav-orders')) {
-      getAllOrders().then(showCards);
+      getAllOrders().then(orderCards);
     }
 
     if (e.target.id.includes('nav-user')) {
