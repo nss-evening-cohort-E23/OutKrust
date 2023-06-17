@@ -1,7 +1,10 @@
+import { getAllOrders } from '../api/orderData';
+import orderCards from '../pages/cards';
 import { showRevenuePage } from '../pages/revenue';
 
 const homePageEvents = () => {
   document.querySelector('#view-orders').addEventListener('click', () => {
+    getAllOrders().then(orderCards);
     // view orders click event listener
   });
 
