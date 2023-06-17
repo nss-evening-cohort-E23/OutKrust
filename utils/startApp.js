@@ -1,6 +1,7 @@
 import domBuilder from '../components/domBuilder';
 import logoutButton from '../components/logoutButton';
 import renderNavbar from '../components/shared/navbar';
+import domEvents from '../events/domEvents';
 import formLaunchers from '../events/formLaunchers';
 import homePageEvents from '../events/homePageEvents';
 import navbarEvents from '../events/navbarEvents';
@@ -16,6 +17,7 @@ const startApp = (user) => {
   formLaunchers();
   navbarEvents(user);
   searchEvents();
+  domEvents();
 };
 
 export default startApp;

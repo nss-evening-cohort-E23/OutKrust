@@ -5,9 +5,10 @@ import {
   getAllOrders,
   updateOrder,
 } from '../api/orderData';
+import showItems from '../pages/items';
 
-function domEvents(user) {
-  document.querySelector('#cards').addEventListener('click', (e) => {
+const domEvents = (user) => {
+  document.querySelector('#homePage').addEventListener('click', (e) => {
     if (e.target.id.includes('update-entry')) {
       const [, firebaseKey] = e.target.id.split('--');
       getSingleOrder(firebaseKey).then((entry) => updateOrder(entry));
@@ -30,6 +31,27 @@ function domEvents(user) {
       getSingleOrder(firebaseKey).then((entryObj) => updateOrder(entryObj));
     }
   });
-}
+  // item details page event //
+  // document.querySelector('#homePage').addEventListener('click', (e) => {
+  //   if (e.target.id.includes('detail-entry--')) {
+  //     const [, firebaseKey] = e.target.id.split('--');
+  //     getSingleOrder(firebaseKey)
+  //       .then((obj) => {
+  //         const newArray = [];
+  //         obj.items.forEach((item) => {
+  //           newArray.push(item);
+  //         });
+  //         return newArray;
+  //       })
+  //       .then(showItems);
+  //   }
+  // });
+  document.querySelector('#homePage').addEventListener('click', (e) => {
+    if (e.target.id.includes('detail-entry--')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      getSingleOrder(firebaseKey).then(showItems);
+    }
+  });
+};
 
 export default domEvents;
