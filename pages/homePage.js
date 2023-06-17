@@ -1,13 +1,13 @@
-import renderToDom from '../../utils/renderToDom';
+import renderToDom from '../utils/renderToDom';
 
-const home = () => {
+const showHomePage = () => {
   const domString = `
-    <h1>Welcome!</h1>
-    <button type="button" class="btn btn-success" id="viewOrderBtn">View Orders</button>
-    <button type="button" class="btn btn-info" id="createOrderBtn">Create an Order</button>
-    <button type="button" class="btn btn-warning" id="viewRevenueBtn">View Revenue</button>`;
-    
-    renderToDom('#homePage', domString);
+<h1>Welcome!</h1>
+<button type="button" id="view-orders" class="btn btn-success">View Orders</button>
+<button type="button" id="create-order" data-bs-toggle="modal" data-bs-target="#order-modal" class="btn btn-info">Create an Order</button>
+<button type="button" id="view-revenue" class="btn btn-warning">View Revenue</button>
+`;
+  renderToDom('#homePage', domString);
 };
 
-export default home;
+export default showHomePage;
