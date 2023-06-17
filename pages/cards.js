@@ -1,6 +1,6 @@
 import renderToDom from '../utils/renderToDom';
 
-const showCards = (array) => {
+const orderCards = (array) => {
   let domString = '';
   array.forEach((order) => {
     console.warn('order', order);
@@ -19,4 +19,4 @@ const showCards = (array) => {
   renderToDom('#homePage', domString);
 };
 
-export default showCards;
+export default orderCards;
