@@ -18,7 +18,7 @@ const domBuilder = () => {
 
 export default domBuilder;
 
-//forms will render to their specific div containers
-//order cards will render to homePage
-//revenue page will render to homePage
-//item details will render to its own container
+// forms will render to their specific div containers
+// order cards will render to homePage
+// revenue page will render to homePage
+// item details will render to its own container
