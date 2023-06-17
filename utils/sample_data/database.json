@@ -1,78 +1,104 @@
 {
   "items": {
     "-NXrMQ6D6GUAFj8iqTER": {
-      "firebaseKey": "-NXrMQ6D6GUAFj8iqTER",
-      "itemName": "Sausage Pizza",
-      "itemPrice": "20"
+      "item_id": "-NXrMQ6D6GUAFj8iqTER",
+      "name": "Sausage Pizza",
+      "price": 20
     },
     "-NXrMlbREOJEhL18DJt-": {
-      "firebaseKey": "-NXrMlbREOJEhL18DJt-",
-      "itemName": "Cheese Pizza",
-      "itemPrice": "35"
+      "item_id": "-NXrMlbREOJEhL18DJt-",
+      "name": "Cheese Pizza",
+      "price": 35
     },
     "-NXrNbxUh7WaRQl2ueC_": {
-      "firebaseKey": "-NXrNbxUh7WaRQl2ueC_",
-      "itemName": "Chonkyfire: Jalapeno Pizza",
-      "itemPrice": "19.98"
+      "item_id": "-NXrNbxUh7WaRQl2ueC_",
+      "name": "Chonkyfire: Jalapeno Pizza",
+      "price": 40
     },
     "-NXrOO6o1sh1CYWXjvVN": {
-      "firebaseKey": "-NXrOO6o1sh1CYWXjvVN",
-      "itemName": "So Fresh and So Cream: Chicken Alfredo",
-      "itemPrice": "19.94"
+      "item_id": "-NXrOO6o1sh1CYWXjvVN",
+      "name": "So Fresh and So Creamy: Chicken Alfredo",
+      "price": 80
     }
   },
   "orders": {
     "-NXrGSFFVxDRJdkPxFYl": {
-      "firebaseKey": "-NXrGSFFVxDRJdkPxFYl",
-      "isOpen": false,
-      "orderName": "Michael's Order",
-      "orderType": "Delivery",
-      "customerPhone": "615-451-0566",
-      "customerEmail": "givmesomepizza@hut.com",
-      "paymentMethod": "Credit Card",
-      "subTotal": "80",
-      "timeStamp": "06/13/2023",
-      "tipAmount": "20",
-      "totalPrice": "100"
+      "order_number": "-NXrGSFFVxDRJdkPxFYl",
+      "name": "Michael's Order 1",
+      "items": [
+        "-NXrOO6o1sh1CYWXjvVN"
+      ],
+      "is_open": false,
+      "order_type": "Call-In",
+      "customer_phone": "615-451-0566",
+      "customer_email": "givemesomepizza@hut.com",
+      "payment_method": "Credit",
+      "sub_total": 80,
+      "tip_amount": 20,
+      "total_price": 100,
+      "timestamp": "2023-06-13T15:30:00.000Z",
+      "created_by": "gP7OdsKBw0PQhmbn3nVLdK4NrM62",
+      "created_by_name": "Kirthana A",
+      "closed_by": "gP7OdsKBw0PQhmbn3nVLdK4NrM62",
+      "closed_by_name": "Kirthana A"
     },
     "-NXrHikHUaPh_MRmxnNg": {
-      "firebaseKey": "-NXrHikHUaPh_MRmxnNg",
-      "isOpen": false,
-      "orderName": "Michael's Order",
-      "orderType": "Delivery",
-      "customerPhone": "615-451-0566",
-      "customerEmail": "givmesomepizza@hut.com",
-      "paymentMethod": "Credit Card",
-      "subTotal": "80",
-      "timeStamp": "may 06",
-      "tipAmount": "20",
-      "totalPrice": "100"
+      "order_number": "-NXrHikHUaPh_MRmxnNg",
+      "name": "Michael's Order 2",
+      "items": [
+        "-NXrMQ6D6GUAFj8iqTER"
+      ],
+      "is_open": false,
+      "order_type": "Call-In",
+      "customer_phone": "615-451-0566",
+      "customer_email": "givemesomepizza@hut.com",
+      "payment_method": "Mobile",
+      "sub_total": 20,
+      "tip_amount": 5,
+      "total_price": 25,
+      "timestamp": "2023-06-15T14:30:00.000Z",
+      "created_by": "gP7OdsKBw0PQhmbn3nVLdK4NrM62",
+      "created_by_name": "Kirthana A",
+      "closed_by": "gP7OdsKBw0PQhmbn3nVLdK4NrM62",
+      "closed_by_name": "Kirthana A"
     },
     "-NXrImdJYvRvpQI2wSuA": {
-      "isOpen": false,
-      "orderName": "Michael's Order",
-      "orderType": "Delivery",
-      "customerPhone": "615-451-0566",
-      "customerEmail": "givmesomepizza@hut.com",
-      "paymentMethod": "Credit Card",
-      "subTotal": "80",
-      "timeStamp": "may 06",
-      "tipAmount": "20",
-      "totalPrice": "100"
+      "order_number": "-NXrImdJYvRvpQI2wSuA",
+      "name": "Michael's Order 3",
+      "items": [
+        "-NXrMlbREOJEhL18DJt-"
+      ],
+      "is_open": true,
+      "order_type": "Call-In",
+      "customer_phone": "615-451-0566",
+      "customer_email": "givemesomepizza@hut.com",
+      "payment_method": null,
+      "sub_total": 35,
+      "tip_amount": null,
+      "total_price": null,
+      "timestamp": "2023-06-10T18:30:00.000Z",
+      "created_by": "WSdJUX5iV0Nxm0OfJMuMggyqzHx2",
+      "created_by_name": "kirthana Sugumaran",
+      "closed_by": null,
+      "closed_by_name": null
     },
     "-NXrL0pH13Xz7oedhXdt": {
-      "isOpen": false,
-      "itemsId": "[]",
-      "orderName": "Michael's Order",
-      "orderType": "Delivery",
-      "customerPhone": "615-451-0566",
-      "customerEmail": "givmesomepizza@hut.com",
-      "paymentMethod": "Credit Card",
-      "subTotal": "0",
-      "timeStamp": "",
-      "tipAmount": "20",
-      "totalPrice": "100",
-      "userId": ""
+      "order_number":"-NXrL0pH13Xz7oedhXdt",
+      "items": ["-NXrNbxUh7WaRQl2ueC_", "-NXrOO6o1sh1CYWXjvVN"],
+      "is_open": false,
+      "name": "Michael's Order 4",
+      "order_type": "Walk-In",
+      "customer_phone": "615-451-0566",
+      "customer_email": "givemesomepizza@hut.com",
+      "payment_method": "Cash",
+      "sub_total": 120,
+      "tip_amount": 25,
+      "total_price": 145,
+      "timestamp": "2023-06-10T18:30:00.000Z",
+      "created_by": "WSdJUX5iV0Nxm0OfJMuMggyqzHx2",
+      "created_by_name": "kirthana Sugumaran",
+      "closed_by": "WSdJUX5iV0Nxm0OfJMuMggyqzHx2",
+      "closed_by_name": "kirthana Sugumaran"
     }
   }
 }

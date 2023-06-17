@@ -1,7 +1,6 @@
-import renderToDom from '../utils/renderToDOM';
+import renderToDom from '../utils/renderToDom';
 
 const showCards = (array) => {
-
   let domString = '';
   array.forEach((order) => {
     console.warn('order', order);
@@ -17,7 +16,7 @@ const showCards = (array) => {
     </div>
   `;
   });
-  renderToDom('#cards', domString);
+  renderToDom('#homePage', domString);
 };
 
 export default showCards;
