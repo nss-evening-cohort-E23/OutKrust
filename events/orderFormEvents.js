@@ -1,9 +1,11 @@
-import { createOrder, updateOrder } from '../api/orderData';
+import { createOrder, getSingleOrder, updateOrder } from '../api/orderData';
+import { addItems } from '../components/shared/itemForm';
 
 const orderFormEvents = (user) => {
-  document.querySelector('form').addEventListener('submit', (e) => {
+  document.querySelector('#app').addEventListener('submit', (e) => {
     e.preventDefault();
     if (e.target.id.includes('submitOrder')) {
+      console.warn('clicked');
       const date = new Date();
       const dateTime = date.toLocaleString();
       const payload = {
@@ -15,12 +17,15 @@ const orderFormEvents = (user) => {
         created_by: user.displayName,
         isOpen: true,
       };
-      createOrder(payload).then(({ name }) => {
-        const patchPayload = {
-          order_number: name
-        };
-        updateOrder(patchPayload);
-      });
+      createOrder(payload)
+        .then(({ name }) => {
+          const patchPayload = {
+            order_number: name
+          };
+          updateOrder(patchPayload);
+          getSingleOrder(name);
+        })
+        .then(addItems);
     }
   });
 };

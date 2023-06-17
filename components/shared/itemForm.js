@@ -25,4 +25,8 @@ const itemForm = () => {
   renderToDom('#homePage', domString);
 };
 
-export default itemForm;
+const addItems = (obj) => {
+  console.warn(obj);
+};
+
+export { itemForm, addItems };
