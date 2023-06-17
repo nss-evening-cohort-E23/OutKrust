@@ -14,7 +14,7 @@ const renderNavbar = (user) => {
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">New Order</a>
+          <a class="nav-link" id="nav-new-order" href="#" data-bs-toggle="modal" data-bs-target="#order-modal">New Order</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
