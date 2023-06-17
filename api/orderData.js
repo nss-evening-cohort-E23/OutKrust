@@ -7,7 +7,7 @@ const getAllOrders = () => new Promise((resolve, reject) => {
   fetch(`${endpoint}/orders.json`, {
     method: 'GET',
     headers: {
-      'content-type': 'application/json',
+      'content-type': 'application/json'
     }
   })
     // then is a function inside promise, input is of type Response
@@ -29,7 +29,7 @@ const getClosedOrders = () => new Promise((resolve, reject) => {
   fetch(`${endpoint}/orders.json?orderBy="is_open"&equalTo=false`, {
     method: 'GET',
     headers: {
-      'content-type': 'application/json',
+      'content-type': 'application/json'
     }
   })
     // then is a function inside promise, input is of type Response
