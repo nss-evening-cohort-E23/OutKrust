@@ -17,9 +17,8 @@ const showItems = (array) => {
   });
   renderToDom('#homePage', cardString);
 
-  const btnString = `<div id="itemBtns">
-  <button class="new-card-btn" id="addItemBtn">Add Item</button> <button class="new-card-btn" id="goPayBtn">Go To Payment</button>
-  </div>`;
+  const btnString = `
+  <button class="new-card-btn" id="addItemBtn">Add Item</button> <button class="new-card-btn" id="goPayBtn">Go To Payment</button>`;
   renderToDom('#detailItemBtns', btnString);
 
   // const itemSum = (items) => {

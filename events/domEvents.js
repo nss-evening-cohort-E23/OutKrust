@@ -6,6 +6,7 @@ import {
   updateOrder,
 } from '../api/orderData';
 import showItems from '../pages/items';
+// import paymentForm from '../components/shared/paymentForm';
 
 const domEvents = (user) => {
   document.querySelector('#homePage').addEventListener('click', (e) => {
@@ -46,12 +47,19 @@ const domEvents = (user) => {
   //       .then(showItems);
   //   }
   // });
+  // item details page event //
   document.querySelector('#homePage').addEventListener('click', (e) => {
     if (e.target.id.includes('detail-entry--')) {
       const [, firebaseKey] = e.target.id.split('--');
       getSingleOrder(firebaseKey).then(showItems);
     }
   });
+  // payment form on dom event //
+  // document.querySelector('#detailItemBtns').addEventListener('click', (e) => {
+  //   if (e.target.id.includes('goPayBtn')) {
+  //     paymentForm();
+  //   }
+  // });
 };
 
 export default domEvents;
