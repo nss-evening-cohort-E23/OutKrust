@@ -1,3 +1,4 @@
+import homePageEvents from '../events/homePageEvents';
 import renderToDom from '../utils/renderToDom';
 
 const showHomePage = () => {
@@ -8,6 +9,7 @@ const showHomePage = () => {
 <button type="button" id="view-revenue" class="btn btn-warning">View Revenue</button>
 `;
   renderToDom('#homePage', domString);
+  homePageEvents();
 };
 
 export default showHomePage;
