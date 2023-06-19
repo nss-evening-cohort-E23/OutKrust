@@ -3,16 +3,18 @@ import showItems from '../pages/items';
 
 const paymentEvents = () => {
   // PAYMENT FORM EVENT LISTENER -  //
-  document.querySelector('#paymentFormDiv').addEventListener('submit', (e) => {
+  document.querySelector('#payFormDiv').addEventListener('submit', (e) => {
     e.preventDefault();
-    const payload = {
-      payment_method: document.querySelector('#payType').value,
-      tip_amount: document.querySelector('#tip').value,
-      is_open: false
-    };
-    updateItem(payload).then(() => {
-      getAllItems().then(showItems);
-    });
+    if (e.target.id.includes('payment')) {
+      const payload = {
+        payment_method: document.querySelector('#payType').value,
+        tip_amount: document.querySelector('#tip').value,
+        is_open: false
+      };
+      updateItem(payload).then(() => {
+        getAllItems().then(showItems);
+      });
+    }
   });
 };
 
