@@ -5,6 +5,7 @@ import renderNavbar from '../components/shared/navbar';
 import domEvents from '../events/domEvents';
 import formLaunchers from '../events/formLaunchers';
 import navbarEvents from '../events/navbarEvents';
+import orderFormEvents from '../events/orderFormEvents';
 import paymentEvents from '../events/paymentEvents';
 import searchEvents from '../events/searchEvents';
 import showHomePage from '../pages/homePage';
@@ -41,6 +42,7 @@ const startApp = (user) => {
   formLaunchers();
   navbarEvents(user);
   searchEvents();
+  orderFormEvents(user);
   domEvents();
   paymentEvents();
 };

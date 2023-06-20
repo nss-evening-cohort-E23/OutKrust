@@ -3,18 +3,18 @@ import renderToDom from '../../utils/renderToDom';
 const orderForm = (obj = {}) => {
   const domString = `
 
-<form id="order" class="mb-4">
+<form id="order-form" class="mb-4">
   <div class="form-group">
     <label for="order-name">Order Name</label>
-    <input type="text" class="form-control" id="order-name" name="order-name" value="${obj.name || ''}" required>
+    <input type="text" class="form-control" id="order-name" name="order-name" value="${obj.name || ''}" required />
   </div>
   <div class="form-group">
     <label for="order-phone">Customer Phone</label>
-    <input type="text" class="form-control" id="order-phone" name="order-phone" value="${obj.customer_phone || ''}" required>
+    <input type="text" class="form-control" id="order-phone" name="order-phone" value="${obj.customer_phone || ''}" required />
   </div>
   <div class="form-group">
     <label for="order-email">Customer Email</label>
-    <input type="text" class="form-control" id="order-email" name="order-email" value="${obj.customer_email || ''}" required>
+    <input type="text" class="form-control" id="order-email" name="order-email" value="${obj.customer_email || ''}" required />
   </div>
   <div class="form-group">
     <label for="order-type">Order Type</label>
@@ -23,7 +23,7 @@ const orderForm = (obj = {}) => {
       <option value="Pick-Up" name="pick-up" ${obj.order_type === 'Pick-up' ? 'selected' : ''}>Pick-Up</option>
       <option value="Delivery" name="delivery" ${obj.order_type === 'Delivery' ? 'selected' : ''}>Delivery</option>
     </select>
-  </div>
+    </div>
   <button type="submit" class="form-btn" id="submitOrder">Submit Order</button>
 </form>`;
   renderToDom('#orderFormDiv', domString);
