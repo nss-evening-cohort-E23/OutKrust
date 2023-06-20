@@ -2,9 +2,9 @@ import { createOrder, getSingleOrder, updateOrder } from '../api/orderData';
 import { addItems } from '../components/shared/itemForm';
 
 const orderFormEvents = (user) => {
-  document.querySelector('#order-form').addEventListener('submit', (e) => {
+  document.querySelector('#order-modal').addEventListener('submit', (e) => {
     e.preventDefault();
-    if (e.target.id.includes('submitOrder')) {
+    if (e.target.id.includes('order-form')) {
       console.warn('clicked');
       const date = new Date();
       const dateTime = date.toLocaleString();

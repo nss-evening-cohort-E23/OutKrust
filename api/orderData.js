@@ -46,7 +46,7 @@ const getClosedOrders = () => new Promise((resolve, reject) => {
 });
 
 const getSingleOrder = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/entires.json?orderBy="uid"&equalTo="${uid}"`, {
+  fetch(`${endpoint}/orders.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ const getSingleOrder = (uid) => new Promise((resolve, reject) => {
 });
 
 const deleteOrder = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/entires/${firebaseKey}.json`, {
+  fetch(`${endpoint}/orders/${firebaseKey}.json`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ const deleteOrder = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 const createOrder = (payload) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/entires.json`, {
+  fetch(`${endpoint}/orders.json`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -82,7 +82,7 @@ const createOrder = (payload) => new Promise((resolve, reject) => {
 });
 
 const updateOrder = (payload) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/entires/${payload.firebaseKey}.json`, {
+  fetch(`${endpoint}/orders/${payload.firebaseKey}.json`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
