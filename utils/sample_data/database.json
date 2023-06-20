@@ -24,81 +24,127 @@
   "orders": {
     "-NXrGSFFVxDRJdkPxFYl": {
       "order_number": "-NXrGSFFVxDRJdkPxFYl",
-      "name": "Michael's Order 1",
+      "name": "Michael's Order",
       "items": [
-        "-NXrOO6o1sh1CYWXjvVN"
+        {
+          "item_id": "-NXrOO6o1sh1CYWXjvVN",
+          "name": "So Fresh and So Creamy: Chicken Alfredo",
+          "price": 80
+        }
       ],
       "is_open": false,
       "order_type": "Call-In",
       "customer_phone": "615-451-0566",
-      "customer_email": "givemesomepizza@hut.com",
+      "customer_email": "michael@gmail.com",
       "payment_method": "Credit",
       "sub_total": 80,
       "tip_amount": 20,
       "total_price": 100,
       "timestamp": "2023-06-13T15:30:00.000Z",
-      "created_by": "gP7OdsKBw0PQhmbn3nVLdK4NrM62",
-      "created_by_name": "Kirthana A",
-      "closed_by": "gP7OdsKBw0PQhmbn3nVLdK4NrM62",
-      "closed_by_name": "Kirthana A"
+      "created_by": {
+        "uid": "guSSXUYCZWSYuwJydkokeF2D9kn2",
+        "display_name": "Kirthana A"
+      },
+      "closed_by": {
+        "uid": "guSSXUYCZWSYuwJydkokeF2D9kn2",
+        "display_name": "Kirthana A"
+      }
     },
     "-NXrHikHUaPh_MRmxnNg": {
       "order_number": "-NXrHikHUaPh_MRmxnNg",
-      "name": "Michael's Order 2",
+      "name": "Kirthana's Order",
       "items": [
-        "-NXrMQ6D6GUAFj8iqTER"
+        {
+          "item_id": "-NXrMQ6D6GUAFj8iqTER",
+          "name": "Sausage Pizza",
+          "price": 20
+        }
       ],
       "is_open": false,
       "order_type": "Call-In",
-      "customer_phone": "615-451-0566",
-      "customer_email": "givemesomepizza@hut.com",
+      "customer_phone": "615-354-1543",
+      "customer_email": "kirthana@gmail.com",
       "payment_method": "Mobile",
       "sub_total": 20,
       "tip_amount": 5,
       "total_price": 25,
       "timestamp": "2023-06-15T14:30:00.000Z",
-      "created_by": "gP7OdsKBw0PQhmbn3nVLdK4NrM62",
-      "created_by_name": "Kirthana A",
-      "closed_by": "gP7OdsKBw0PQhmbn3nVLdK4NrM62",
-      "closed_by_name": "Kirthana A"
+      "created_by": {
+        "uid": "guSSXUYCZWSYuwJydkokeF2D9kn2",
+        "display_name": "Kirthana A"
+      },
+      "closed_by": {
+        "uid": "guSSXUYCZWSYuwJydkokeF2D9kn2",
+        "display_name": "Kirthana A"
+      }
     },
     "-NXrImdJYvRvpQI2wSuA": {
       "order_number": "-NXrImdJYvRvpQI2wSuA",
-      "name": "Michael's Order 3",
+      "name": "Mara's Order",
       "items": [
-        "-NXrMlbREOJEhL18DJt-"
+        {
+          "item_id": "-NXrMlbREOJEhL18DJt-",
+          "name": "Cheese Pizza",
+          "price": 35
+        }
       ],
       "is_open": true,
       "order_type": "Call-In",
-      "customer_phone": "615-451-0566",
-      "customer_email": "givemesomepizza@hut.com",
+      "customer_phone": "982-093-2319",
+      "customer_email": "mara@gmail.com",
       "payment_method": null,
       "sub_total": 35,
       "tip_amount": null,
       "total_price": null,
       "timestamp": "2023-06-10T18:30:00.000Z",
-      "created_by": "WSdJUX5iV0Nxm0OfJMuMggyqzHx2",
-      "created_by_name": "kirthana Sugumaran",
+      "created_by": {
+        "uid": "8TgqhpUSp9QyTbCTeiVTNbihHy93",
+        "display_name": "kirthana Sugumaran"
+      },
       "closed_by": null,
       "closed_by_name": null
     },
     "-NXrL0pH13Xz7oedhXdt": {
-      "order_number":"-NXrL0pH13Xz7oedhXdt",
-      "items": ["-NXrNbxUh7WaRQl2ueC_", "-NXrOO6o1sh1CYWXjvVN"],
+      "order_number": "-NXrL0pH13Xz7oedhXdt",
+      "items": [
+        {
+          "item_id": "-NXrNbxUh7WaRQl2ueC_",
+          "name": "Chonkyfire: Jalapeno Pizza",
+          "price": 40
+        },
+        {
+          "item_id": "-NXrOO6o1sh1CYWXjvVN",
+          "name": "So Fresh and So Creamy: Chicken Alfredo",
+          "price": 80
+        }
+      ],
       "is_open": false,
-      "name": "Michael's Order 4",
+      "name": "Melissa's Order",
       "order_type": "Walk-In",
-      "customer_phone": "615-451-0566",
-      "customer_email": "givemesomepizza@hut.com",
+      "customer_phone": "625-904-8173",
+      "customer_email": "melissa@gmail.com",
       "payment_method": "Cash",
       "sub_total": 120,
       "tip_amount": 25,
       "total_price": 145,
       "timestamp": "2023-06-10T18:30:00.000Z",
-      "created_by": "WSdJUX5iV0Nxm0OfJMuMggyqzHx2",
-      "created_by_name": "kirthana Sugumaran",
-      "closed_by": "WSdJUX5iV0Nxm0OfJMuMggyqzHx2",
-      "closed_by_name": "kirthana Sugumaran"
+      "created_by": {
+        "uid": "8TgqhpUSp9QyTbCTeiVTNbihHy93",
+        "display_name": "kirthana Sugumaran"
+      },
+      "closed_by": {
+        "uid": "8TgqhpUSp9QyTbCTeiVTNbihHy93",
+        "display_name": "kirthana Sugumaran"
+      }
+    }
+  },
+  "users": {
+    "-NYB6HfkRBLGsdTtrf9L": {
+      "user_id": "-NYB6HfkRBLGsdTtrf9L",
+      "uid": "8TgqhpUSp9QyTbCTeiVTNbihHy93",
+      "display_name": "kirthana Sugumaran",
+      "role": "User",
+      "last_login_timestamp": "2023-06-10T18:30:00.000Z"
     }
   }
 }
