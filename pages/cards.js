@@ -15,6 +15,7 @@ const orderCards = (array) => {
         <a href="#" class="card-link" id="update-entry--${order.order_number}">Edit</a>
         <a href="#" class="card-link" id="delete-entry--${order.order_number}">Delete</a>
       </div>
+      <div></div>
     </div>
   `;
   });
