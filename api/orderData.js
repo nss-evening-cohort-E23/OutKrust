@@ -45,15 +45,15 @@ const getClosedOrders = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const getSingleOrder = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/entires.json?orderBy="uid"&equalTo="${uid}"`, {
+const getSingleOrder = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/orders/"${firebaseKey}".json`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
   })
     .then((response) => response.json())
-    .then((data) => resolve(Object.values(data)))
+    .then((data) => resolve(data))
     .catch(reject);
 });
 
@@ -82,7 +82,7 @@ const createOrder = (payload) => new Promise((resolve, reject) => {
 });
 
 const updateOrder = (payload) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/entires/${payload.firebaseKey}.json`, {
+  fetch(`${endpoint}/orders/${payload.firebaseKey}.json`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',

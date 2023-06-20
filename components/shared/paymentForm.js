@@ -6,21 +6,22 @@ const paymentForm = (obj = {}) => {
   
   <div class="form-group">
   <label for="payType">Payment Type</label>
-  <select id="payType" name="paymentOption" value="${obj.paymentMethod || ''}" required>
-    <option value="Credit Card" ${obj.paymentMethod === 'Credit Card' ? 'selected' : ''}>Credit Card</option>
-    <option value="Cash" ${obj.paymentMethod === 'Cash' ? 'selected' : ''}>Cash</option>
-    <option value="Mobile" ${obj.paymentMethod === 'Mobile' ? 'selected' : ''}>Mobile</option>
+  <select id="payType" name="paymentOption" value="${obj.payment_method || ''}" required>
+    <option value="Credit Card" ${obj.payment_method === 'Credit Card' ? 'selected' : ''}>Credit Card</option>
+    <option value="Cash" ${obj.payment_method === 'Cash' ? 'selected' : ''}>Cash</option>
+    <option value="Mobile" ${obj.payment_method === 'Mobile' ? 'selected' : ''}>Mobile</option>
   </select>
   </div>
 
   <div class="form-group">
     <label for="tip">Tip Amount</label>
-    <input type="text" class="form-control" id="tip" placeholder="0" value="${obj.tipAmount || ''}" required>
+    <input type="text" class="form-control" id="tip" placeholder="0" value="${obj.tip_amount || ''}" required>
   </div>
   
   <button type="submit" class="form-btn" id="closeOrder">Close Order</button>
 
-</form>`;
+</form>
+  `;
   renderToDom('#paymentFormDiv', domString);
 };
 
