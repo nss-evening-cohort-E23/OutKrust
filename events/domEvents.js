@@ -39,13 +39,9 @@ const domEvents = (user) => {
   //     const [, firebaseKey] = e.target.id.split('--');
   //     getSingleOrder(firebaseKey)
   //       .then((obj) => {
-  //         const newArray = [];
-  //         obj.items.forEach((item) => {
-  //           newArray.push(item);
-  //         });
-  //         return newArray;
-  //       })
-  //       .then(showItems);
+  //         console.warn(obj);
+  //         showItems(obj.items);
+  //       });
   //   }
   // });
   // item details page event //

@@ -7,18 +7,18 @@ const showItems = (array) => {
     cardString += `
     <div class="card" style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title">${item.name}</h5>
-      <h6 class="lang">${item.price}</h6>
+      <h5 class="card-title">${item.items.name}</h5>
+      <h6 class="lang">${item.items.price}</h6>
         <hr>
-        <button id="editItemBtn--${item.firebaseKey}" class="btn btn-info">edit</button>
-        <button id="deleteItemBtn--${item.firebaseKey}" class="btn btn-danger">delete</button>
+        <button id="editItemBtn--${item.items.item_id}" class="btn btn-info">edit</button>
+        <button id="deleteItemBtn--${item.items.item_id}" class="btn btn-danger">delete</button>
     </div>
   </div>`;
   });
   renderToDom('#homePage', cardString);
 
   const btnString = `
-  <button class="new-card-btn" id="addItemBtn">Add Item</button> <button class="new-card-btn" id="goPayBtn">Go To Payment</button>`;
+  <button class="new-card-btn" id="addItemBtn">Add Item</button> <button class="new-card-btn" id="goPayBtn" data-bs-toggle="modal" data-bs-target="#payment-modal">Go To Payment</button>`;
   renderToDom('#detailItemBtns', btnString);
 
   // const itemSum = (items) => {

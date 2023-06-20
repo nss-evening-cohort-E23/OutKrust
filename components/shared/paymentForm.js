@@ -1,7 +1,7 @@
 import renderToDom from '../../utils/renderToDom';
 
 const paymentForm = (obj = {}) => {
-  const domString = `<div id="payFormDiv">
+  const domString = `
   <form id="payment" class="mb-4">
   
   <div class="form-group">
@@ -21,9 +21,8 @@ const paymentForm = (obj = {}) => {
   <button type="submit" class="form-btn" id="closeOrder">Close Order</button>
 
 </form>
-  </div>
   `;
-  renderToDom('#homePage', domString);
+  renderToDom('#paymentFormDiv', domString);
 };
 
 export default paymentForm;
