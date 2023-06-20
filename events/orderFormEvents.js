@@ -2,7 +2,7 @@ import { createOrder, getSingleOrder, updateOrder } from '../api/orderData';
 import { addItems } from '../components/shared/itemForm';
 
 const orderFormEvents = (user) => {
-  document.querySelector('#app').addEventListener('submit', (e) => {
+  document.querySelector('#order-form').addEventListener('submit', (e) => {
     e.preventDefault();
     if (e.target.id.includes('submitOrder')) {
       console.warn('clicked');

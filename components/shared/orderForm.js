@@ -3,7 +3,7 @@ import renderToDom from '../../utils/renderToDom';
 const orderForm = (obj = {}) => {
   const domString = `
 
-<form id="order" class="mb-4">
+<form id="order-form" class="mb-4">
   <div class="form-group">
     <label for="order-name">Order Name</label>
     <input type="text" class="form-control" id="order-name" name="order-name" value="${obj.name || ''}" required>
@@ -23,9 +23,9 @@ const orderForm = (obj = {}) => {
       <option value="Pick-Up" name="pick-up" ${obj.order_type === 'Pick-up' ? 'selected' : ''}>Pick-Up</option>
       <option value="Delivery" name="delivery" ${obj.order_type === 'Delivery' ? 'selected' : ''}>Delivery</option>
     </select>
+    <button type="submit" class="form-btn" id="submitOrder">Submit Order</button>
   </div>
-  <button type="submit" class="form-btn" id="submitOrder">Submit Order</button>
-</form>`;
+  </form>`;
   renderToDom('#orderFormDiv', domString);
 };
 
