@@ -1,6 +1,6 @@
 import orderForm from '../components/shared/orderForm';
 import paymentForm from '../components/shared/paymentForm';
-import itemForm from '../components/shared/itemForm';
+import { itemForm } from '../components/shared/itemForm';
 
 const formLaunchers = () => {
   document.querySelector('#app').addEventListener('click', (e) => {

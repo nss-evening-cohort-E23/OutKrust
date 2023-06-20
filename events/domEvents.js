@@ -6,7 +6,7 @@ import {
   updateOrder,
 } from '../api/orderData';
 import showItems from '../pages/items';
-import itemForm from '../components/shared/itemForm';
+import { itemForm } from '../components/shared/itemForm';
 // import paymentForm from '../components/shared/paymentForm';
 
 const domEvents = (user) => {
