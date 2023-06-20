@@ -6,7 +6,9 @@ const domBuilder = () => {
     <div id="navbar"></div>
   </header>
   <main>
+    <div id="itemTotals"></div>
     <div id="homePage"></div>
+    <div id="detailItemBtns"></div>
 
     <div class="modal fade" id="order-modal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">

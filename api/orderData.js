@@ -45,15 +45,16 @@ const getClosedOrders = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const getSingleOrder = (uid) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/orders.json?orderBy="uid"&equalTo="${uid}"`, {
+
+const getSingleOrder = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/orders/"${firebaseKey}".json`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
   })
     .then((response) => response.json())
-    .then((data) => resolve(Object.values(data)))
+    .then((data) => resolve(data))
     .catch(reject);
 });
 

@@ -5,9 +5,12 @@ import {
   getAllOrders,
   updateOrder,
 } from '../api/orderData';
+import showItems from '../pages/items';
+import itemForm from '../components/shared/itemForm';
+// import paymentForm from '../components/shared/paymentForm';
 
-function domEvents(user) {
-  document.querySelector('#cards').addEventListener('click', (e) => {
+const domEvents = (user) => {
+  document.querySelector('#homePage').addEventListener('click', (e) => {
     if (e.target.id.includes('update-entry')) {
       const [, firebaseKey] = e.target.id.split('--');
       getSingleOrder(firebaseKey).then((entry) => updateOrder(entry));
@@ -30,6 +33,30 @@ function domEvents(user) {
       getSingleOrder(firebaseKey).then((entryObj) => updateOrder(entryObj));
     }
   });
-}
+  // item details page event //
+  // document.querySelector('#homePage').addEventListener('click', (e) => {
+  //   if (e.target.id.includes('detail-entry--')) {
+  //     const [, firebaseKey] = e.target.id.split('--');
+  //     getSingleOrder(firebaseKey)
+  //       .then((obj) => {
+  //         console.warn(obj);
+  //         showItems(obj.items);
+  //       });
+  //   }
+  // });
+  // item details page event //
+  document.querySelector('#homePage').addEventListener('click', (e) => {
+    if (e.target.id.includes('detail-entry--')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      getSingleOrder(firebaseKey).then(showItems);
+    }
+  });
+  // add item click event //
+  document.querySelector('#homePage').addEventListener('click', (e) => {
+    if (e.target.id.includes('addItemBtn')) {
+      itemForm();
+    }
+  });
+};
 
 export default domEvents;

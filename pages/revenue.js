@@ -2,6 +2,7 @@
 
 import { getClosedOrders } from '../api/orderData';
 import renderToDom from '../utils/renderToDom';
+import showChart from './chart';
 
 // It holds all orders from api
 const updateRevenueInfo = (orders) => {
@@ -12,7 +13,7 @@ const updateRevenueInfo = (orders) => {
 
   // variables to hold the values
   let totalRevenue = 0;
-  // here min and maxdate are kept undefined to make it get true in the if statement below
+  // here min and maxDate are kept undefined to make it get true in the if statement below
   let minDate;
   let maxDate;
   let totalTip = 0;
@@ -79,9 +80,11 @@ const showRevenuePage = () => {
         <input id="end-date" class="form-control" type="datetime-local" />
         <button type='submit' id="date-range-calculate">Run</button>
       </div>
+      <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
       <div id="revenue-info"></div>`;
   // revenue-info is like a placeholder which displays the updateRevenueInfo's domstring
   renderToDom('#homePage', domString);
+  showChart();
   // calling the api,getting all closed orders and sending it to updateRevenueInfo
   getClosedOrders().then((orders) => updateRevenueInfo(orders));
 
