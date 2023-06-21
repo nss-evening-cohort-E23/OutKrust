@@ -31,6 +31,15 @@ const navbarEvents = (user) => {
       renderToDom('#home-page', domstring);
     }
   });
+  // search //
+  const search = (event) => {
+    const eventLC = event.target.value.toLowerCase();
+    getAllOrders().then((data) => {
+      const searching = Object.values(data).filter((obj) => obj.name.toLowerCase().includes(eventLC) || obj.customer_phone.toLowerCase().includes(eventLC) || obj.customer_email.toLowerCase().includes(eventLC));
+      return searching;
+    }).then(showOrderCards);
+  };
+  document.querySelector('#search-bar').addEventListener('keyup', search);
 };
 
 export default navbarEvents;
