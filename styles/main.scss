@@ -3,10 +3,25 @@
 
 
 body {
-  background-color: antiquewhite;
+  background-image: url("outkrustBackground.avif");
+  background-size: cover;
   color: brown;
   width: 100vw;
   height: 100vh;
+}
+
+#hipHopAccordion {
+  background-color: transparent;
+  color: transparent;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+}
+
+.hip-hop {
+  background-color: transparent;
+  color: transparent;
 }
 
 #app {
@@ -26,6 +41,12 @@ body {
   align-items: center;
   gap: 20px;
   margin-top: 40px;
+}
+
+#home-page > h1 {
+  background-color: transparent;
+  backdrop-filter: sepia(100%) blur(30px);
+  
 }
 
 // login, logout button

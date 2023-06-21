@@ -2,6 +2,7 @@ import { getUser, patchUser, postUser } from '../api/userData';
 import domBuilder from '../components/domBuilder';
 import logoutButton from '../components/logoutButton';
 import renderNavbar from '../components/shared/navbar';
+import welcomeVideo from '../components/shared/welcomeVideo';
 import domEvents from '../events/domEvents';
 import formLaunchers from '../events/formLaunchers';
 import orderItemFormEvents from '../events/itemFormEvents';
@@ -47,6 +48,7 @@ const startApp = (user) => {
   orderFormEvents(user);
   orderItemFormEvents();
   paymentEvents(user);
+  welcomeVideo();
 };
 
 export default startApp;
