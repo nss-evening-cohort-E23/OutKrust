@@ -3,10 +3,25 @@
 
 
 body {
-  background-color: antiquewhite;
+  background-image: url("outkrustBackground.avif");
+  background-size: cover;
   color: brown;
   width: 100vw;
   height: 100vh;
+}
+
+#hipHopAccordion {
+  background-color: transparent;
+  color: transparent;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 120px;
+}
+
+.hip-hop {
+  background-color: transparent;
+  color: transparent;
 }
 
 #app {
@@ -28,13 +43,21 @@ body {
   margin-top: 40px;
 }
 
+#home-page > h1 {
+  background-color: transparent;
+  backdrop-filter: invert(80%) blur(1px);
+  padding: 18px 120px;
+  border-radius: 16px;
+  color: #312509;
+  margin-bottom: 64px;
+  
+}
+
 // login, logout button
 #google-auth {
   display: flex;
   justify-content: center;
-  background: white;
-  color: black;
-  width: 100px;
+  border-color: lightgray;
 }
 
 #login-text {
@@ -75,4 +98,26 @@ body {
 
 #order-card-container {
   padding: 0px 25px;
+}
+
+.navbar, .container-fluid, .navbar-expand, .bg-body-tertiary {
+  background-color: transparent;
+  backdrop-filter: invert(80%) blur(2px);
+  color: #312509;
+}
+
+.btn-outkrust {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background-color: transparent;
+  backdrop-filter: invert(100%) blur(20px);
+  width: 200px;
+  border-radius: 6px;
+  color: #312509;
+  text-align: center;
+
+}
+
+#search-btn {
+  border-color: lightgray;
 }

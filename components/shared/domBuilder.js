@@ -7,6 +7,7 @@ const domBuilder = () => {
   </header>
   <main>
     <div id="home-page"></div>
+    <div id="hip-hop"></div>
 
     <div class="modal fade" id="order-modal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">

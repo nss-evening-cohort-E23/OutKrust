@@ -2,13 +2,13 @@ import { getUser, patchUser, postUser } from '../api/userData';
 import domBuilder from '../components/shared/domBuilder';
 import logoutButton from '../components/shared/logoutButton';
 import renderNavbar from '../components/shared/navbar';
+import welcomeVideo from '../components/shared/welcomeVideo';
 import domEvents from '../events/domEvents';
 import formLaunchers from '../events/formLaunchers';
 import orderItemFormEvents from '../events/itemFormEvents';
 import navbarEvents from '../events/navbarEvents';
 import orderFormEvents from '../events/orderFormEvents';
 import paymentEvents from '../events/paymentEvents';
-import searchEvents from '../events/searchEvents';
 import showHomePage from '../pages/homePage';
 
 const startApp = (user) => {
@@ -43,10 +43,10 @@ const startApp = (user) => {
   logoutButton(); // ADD THE LOGOUT BUTTON COMPONENT
   showHomePage();
   formLaunchers();
-  searchEvents();
   orderFormEvents(user);
   orderItemFormEvents();
   paymentEvents(user);
+  welcomeVideo();
 };
 
 export default startApp;

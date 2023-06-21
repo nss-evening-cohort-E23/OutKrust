@@ -1,4 +1,4 @@
-import { createOrder, updateOrder, getAllOrders } from '../api/orderData';
+import { createOrder, getAllOrders, updateOrder } from '../api/orderData';
 import showOrderCards from '../pages/cards';
 
 const orderFormEvents = (user) => {
@@ -25,7 +25,7 @@ const orderFormEvents = (user) => {
             order_number: name
           };
           updateOrder(patchPayload).then(() => {
-            getAllOrders().then((orders) => showOrderCards(orders));
+            getAllOrders().then(showOrderCards);
           });
         });
     } else if (e.target.id.includes('update-order')) {
