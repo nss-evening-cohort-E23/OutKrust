@@ -1,32 +1,37 @@
 import renderToDom from '../../utils/renderToDom';
+import itemList from '../shared/itemList';
 
-const itemForm = () => {
-  const domString = `
-
-<form id="order" class="mb-4">
- 
-  <div class="form-group">
-    <label for="menu-item">Add Item</label>
-    <select id="menu-item" name="menu-item" required>
-      
-    </select>
-  </div>
-  <div class="form-group">
-  <label for="new-item-name">New item</label>
-  <input type="text" class="form-control" id="new-item-name" name="new-item-name">
-</div>
-<div class="form-group">
-  <label for="new-item-price">New Price</label>
-  <input pattern="^d*.d{2}$"class="form-control" id="new-item-price" name="new-item-price">
-</div>
-
-  <button type="submit" class="form-btn" id="submitOrder">Close Order</button>
-</form>`;
-  renderToDom('#homePage', domString);
+const showItemForm = (order, item = {}) => {
+  let domString = `
+    <form id="${item.item_id ? `update-item--${order.order_number}--${item.item_id}` : `add-item--${order.order_number}`}" class="mb-4">
+    `;
+  if (!item.item_id) {
+    domString += `
+      <div class="form-group" id="select-item">
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
+      </div>
+      `;
+    domString += '</form>';
+    renderToDom('#item-form-container', domString);
+    itemList(order.items);
+  } else {
+    domString += `
+      <div class="form-group">
+        <label for="item-name">Name</label>
+        <input type="text" class="form-control" id="item-name" value="${item.name || ''}" />
+      </div>
+      <div class="form-group">
+        <label for="item-price">Price</label>
+        <input type="text" pattern="\\d*(\\.\\d{2})?" class="form-control" id="item-price" value="${item.price || ''}" />
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Submit</button>
+      </div>`;
+    domString += '</form>';
+    renderToDom('#item-form-container', domString);
+  }
 };
 
-const addItems = (obj) => {
-  console.warn(obj);
-};
-
-export { itemForm, addItems };
+export default showItemForm;

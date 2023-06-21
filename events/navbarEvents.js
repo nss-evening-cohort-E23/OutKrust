@@ -1,12 +1,11 @@
 import { getAllOrders } from '../api/orderData';
-import orderCards from '../pages/cards';
+import showOrderCards from '../pages/cards';
 import showHomePage from '../pages/homePage';
 import { showRevenuePage } from '../pages/revenue';
 import renderToDom from '../utils/renderToDom';
 
 const navbarEvents = (user) => {
-  document.querySelector('#app').addEventListener('click', (e) => {
-    e.preventDefault();
+  document.querySelector('#navbar').addEventListener('click', (e) => {
     if (e.target.id.includes('nav-home')) {
       showHomePage();
     }
@@ -20,7 +19,7 @@ const navbarEvents = (user) => {
     }
 
     if (e.target.id.includes('nav-orders')) {
-      getAllOrders().then(orderCards);
+      getAllOrders().then(showOrderCards);
     }
 
     if (e.target.id.includes('nav-user')) {
@@ -29,7 +28,7 @@ const navbarEvents = (user) => {
         <h1>Congratulations to Triple Platinum Employee of the Decade</h1>
         <h2>${user.displayName}</h2>
       </div>`;
-      renderToDom('#homePage', domstring);
+      renderToDom('#home-page', domstring);
     }
   });
 };

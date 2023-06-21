@@ -1,4 +1,4 @@
-import orderCards from '../pages/cards';
+import showOrderCards from '../pages/cards';
 import {
   getSingleOrder,
   deleteOrder,
@@ -6,57 +6,45 @@ import {
   updateOrder,
 } from '../api/orderData';
 import showItems from '../pages/items';
-import { itemForm } from '../components/forms/itemForm';
+
 // import paymentForm from '../components/shared/paymentForm';
 
-function domEvents(user) {
-  document.querySelector('#homePage').addEventListener('click', (e) => {
-    if (e.target.id.includes('update-entry')) {
-      const [, firebaseKey] = e.target.id.split('--');
-      getSingleOrder(firebaseKey).then((entry) => updateOrder(entry));
-    }
-
-    if (e.target.id.includes('delete-entry')) {
+const domEvents = () => {
+  document.querySelector('#home-page').addEventListener('click', (e) => {
+    if (e.target.id.includes('order-detail--')) {
+      const [, orderNumber] = e.target.id.split('--');
+      getSingleOrder(orderNumber).then((order) => {
+        showItems(order);
+      });
+    } else if (e.target.id.includes('order-delete')) {
       // eslint-disable-next-line no-alert
       if (window.confirm('Do you want to delete this order?')) {
-        console.warn('DELETE ORDER', e.target.id);
-        const [, firebaseKey] = e.target.id.split('--');
-
-        deleteOrder(firebaseKey).then(() => {
-          getAllOrders(user.uid).then(orderCards);
+        const [, orderNumber] = e.target.id.split('--');
+        deleteOrder(orderNumber).then(() => {
+          getAllOrders().then(showOrderCards);
+        });
+      }
+    } else if (e.target.id.includes('delete-item-btn')) {
+      // eslint-disable-next-line no-alert
+      if (window.confirm('Do you want to delete this order?')) {
+        const [, orderNumber, itemId] = e.target.id.split('--');
+        getSingleOrder(orderNumber).then((order) => {
+          const { items } = order;
+          const itemIndex = items.findIndex((i) => i.item_id === itemId);
+          const itemPrice = items[itemIndex].price;
+          items.splice(itemIndex, 1);
+          const payload = {
+            order_number: order.order_number,
+            sub_total: order.sub_total - itemPrice,
+            items
+          };
+          updateOrder(payload).then(() => {
+            getSingleOrder(orderNumber).then(showItems);
+          });
         });
       }
     }
-    if (e.target.id.includes('edit-entry')) {
-      const [, firebaseKey] = e.target.id.split('--');
-
-      getSingleOrder(firebaseKey).then((entryObj) => updateOrder(entryObj));
-    }
   });
-  // item details page event //
-  // document.querySelector('#homePage').addEventListener('click', (e) => {
-  //   if (e.target.id.includes('detail-entry--')) {
-  //     const [, firebaseKey] = e.target.id.split('--');
-  //     getSingleOrder(firebaseKey)
-  //       .then((obj) => {
-  //         console.warn(obj);
-  //         showItems(obj.items);
-  //       });
-  //   }
-  // });
-  // item details page event //
-  document.querySelector('#homePage').addEventListener('click', (e) => {
-    if (e.target.id.includes('detail-entry--')) {
-      const [, firebaseKey] = e.target.id.split('--');
-      getSingleOrder(firebaseKey).then(showItems);
-    }
-  });
-  // add item click event //
-  document.querySelector('#homePage').addEventListener('click', (e) => {
-    if (e.target.id.includes('addItemBtn')) {
-      itemForm();
-    }
-  });
-}
+};
 
 export default domEvents;

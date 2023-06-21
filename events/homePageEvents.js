@@ -1,15 +1,11 @@
 import { getAllOrders } from '../api/orderData';
-import orderCards from '../pages/cards';
+import showOrderCards from '../pages/cards';
 import { showRevenuePage } from '../pages/revenue';
 
 const homePageEvents = () => {
   document.querySelector('#view-orders').addEventListener('click', () => {
-    getAllOrders().then(orderCards);
+    getAllOrders().then(showOrderCards);
     // view orders click event listener
-  });
-
-  document.querySelector('#create-order').addEventListener('click', () => {
-    // create order click event listener
   });
 
   document.querySelector('#view-revenue').addEventListener('click', () => {

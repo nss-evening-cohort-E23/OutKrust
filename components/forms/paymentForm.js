@@ -1,28 +1,29 @@
 import renderToDom from '../../utils/renderToDom';
 
-const paymentForm = (obj = {}) => {
+const showPaymentForm = (order = {}) => {
   const domString = `
-  <form id="payment" class="mb-4">
+  <form id="payment--${order.order_number}" class="mb-4">
   
-  <div class="form-group">
-  <label for="payType">Payment Type</label>
-  <select id="payType" name="paymentOption" value="${obj.payment_method || ''}" required>
-    <option value="Credit Card" ${obj.payment_method === 'Credit Card' ? 'selected' : ''}>Credit Card</option>
-    <option value="Cash" ${obj.payment_method === 'Cash' ? 'selected' : ''}>Cash</option>
-    <option value="Mobile" ${obj.payment_method === 'Mobile' ? 'selected' : ''}>Mobile</option>
-  </select>
-  </div>
+    <div class="form-group">
+    <label for="pay-type">Payment Type</label>
+    <select id="pay-type" name="paymentOption" value="${order.payment_method || ''}" required>
+      <option value="Credit Card" ${order.payment_method === 'Credit Card' ? 'selected' : ''}>Credit Card</option>
+      <option value="Cash" ${order.payment_method === 'Cash' ? 'selected' : ''}>Cash</option>
+      <option value="Mobile" ${order.payment_method === 'Mobile' ? 'selected' : ''}>Mobile</option>
+    </select>
+    </div>
 
-  <div class="form-group">
-    <label for="tip">Tip Amount</label>
-    <input type="text" class="form-control" id="tip" placeholder="0" value="${obj.tip_amount || ''}" required>
-  </div>
-  
-  <button type="submit" class="form-btn" id="closeOrder">Close Order</button>
-
-</form>
+    <div class="form-group">
+      <label for="tip">Tip Amount</label>
+      <input type="text" class="form-control" id="tip" placeholder="0" value="${order.tip_amount || ''}" required>
+    </div>
+    
+    <div class="modal-footer">
+      <button type="submit" class="form-btn" id="close-order" data-bs-dismiss="modal">Close Order</button>
+    </div>
+  </form>
   `;
-  renderToDom('#paymentFormDiv', domString);
+  renderToDom('#payment-form-container', domString);
 };
 
-export default paymentForm;
+export default showPaymentForm;

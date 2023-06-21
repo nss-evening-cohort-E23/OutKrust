@@ -1,12 +1,24 @@
+import { getAllItems } from '../../api/itemData';
 import renderToDom from '../../utils/renderToDom';
 
-const itemList = (array) => {
-  let itemListString = '';
-  array.forEach((item) => {
-    itemListString += `
-    <option id="menu-${item.firebaseKey}" value="${item.firebaseKey}" name="menu-${item.firebaseKey}">${item.itemName} - ${item.itemPrice}</option>`;
+const itemList = (itemsToExclude) => {
+  // it returns a dropdown with items that are not already added to the order
+  let itemSelect = `<label for="menu-item">Item</label>
+    <select class="form-control" id="menu-item" required>
+    <option value="">Choose Item</option>`;
+  getAllItems().then((items) => {
+    items.forEach((item) => {
+      const itemExists = itemsToExclude.find((ie) => ie.item_id === item.item_id);
+      if (!itemExists) {
+        itemSelect += `
+            <option value="${item.item_id}">
+                ${item.name}
+            </option>`;
+      }
+    });
+    itemSelect += '</select>';
+    renderToDom('#select-item', itemSelect);
   });
-  renderToDom('#menu-item', itemListString);
 };
 
 export default itemList;

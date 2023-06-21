@@ -1,33 +1,28 @@
 import renderToDom from '../utils/renderToDom';
 
-const orderCards = (array) => {
-  let domString = '';
-  array.forEach((order) => {
-    console.warn('order', order);
+const showOrderCards = (orders) => {
+  let domString = '<div id="order-card-container" class="d-flex flex-row justify-content-center flex-wrap gap-2">';
+  orders.forEach((order) => {
     domString += `
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-name">${order.name}</h5>
-          <h6 class="card-phone">${order.customer_phone}</h6>
-          <h7 class="card-email">${order.customer_email}</h7>
-          <h8 class="card-order-type">${order.order_type}</h8>
-          <a href="#" class="card-link" id="detail-entry--${order.order_number}" class="btn btn-success">Detail</a>
-          <a href="#" class="card-link" id="update-entry--${order.order_number}" class="btn btn-warning">Edit</a>
-          <a href="#" class="card-link" id="delete-entry--${order.order_number}" class="btn btn-danger">Delete</a>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-name">${order.name}</h5>
+        <h6 class="card-phone">${order.customer_phone}</h6>
+        <h7 class="card-email">${order.customer_email}</h7>
+        <h7 class="card-email">${order.is_open ? 'Open' : 'Closed'}</h7>
+        <h8 class="card-order-type">${order.order_type}</h8>
+        <div class="d-flex flex-row justify-content-between">
+          <div>
+            <a href="#" class="card-link" id="order-detail--${order.order_number}">Detail</a>
+            <a href="#" class="card-link" id="order-update--${order.order_number}" data-bs-toggle="modal" data-bs-target="#order-modal">Edit</a>
+          </div>
+          <a href="#" class="card-link" id="order-delete--${order.order_number}">Delete</a>
         </div>
       </div>
     `;
   });
-
-  const containerStyle = `
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  `;
-  const containerElement = document.createElement('div');
-  containerElement.setAttribute('style', containerStyle);
-  containerElement.innerHTML = domString;
-  renderToDom('#homePage', containerElement.outerHTML);
+  domString += '</div>';
+  renderToDom('#home-page', domString);
 };
 
-export default orderCards;
+export default showOrderCards;
