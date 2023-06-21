@@ -1,4 +1,5 @@
-import { createOrder, updateOrder } from '../api/orderData';
+import { createOrder, getAllOrders, updateOrder } from '../api/orderData';
+import showOrderCards from '../pages/cards';
 
 const orderFormEvents = (user) => {
   document.querySelector('#order-form-container').addEventListener('submit', (e) => {
@@ -23,7 +24,9 @@ const orderFormEvents = (user) => {
           const patchPayload = {
             order_number: name
           };
-          updateOrder(patchPayload);
+          updateOrder(patchPayload).then(() => {
+            getAllOrders().then(showOrderCards);
+          });
         });
     } else if (e.target.id.includes('update-order')) {
       const date = new Date();
