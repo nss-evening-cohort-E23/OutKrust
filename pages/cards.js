@@ -27,7 +27,7 @@ const orderCards = (array) => {
   const containerElement = document.createElement('div');
   containerElement.setAttribute('style', containerStyle);
   containerElement.innerHTML = domString;
-  renderToDom('#homePage', domString, containerElement.outerHTML);
+  renderToDom('#homePage', containerElement.outerHTML);
 };
 
 export default orderCards;
