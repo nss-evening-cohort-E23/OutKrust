@@ -28,8 +28,8 @@ const getAllItems = () => new Promise((resolve, reject) => {
 
 // GET SINGLE ITEM //
 
-const getSingleItem = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/items/${firebaseKey}.json`, {
+const getSingleItem = (itemId) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/items/${itemId}.json`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

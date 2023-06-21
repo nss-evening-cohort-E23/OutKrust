@@ -36,7 +36,7 @@ const updateRevenueInfo = (orders) => {
     if (!maxDate || orderDate > maxDate) {
       maxDate = orderDate;
     }
-    totalTip += order.tip_amount;
+    totalTip += +order.tip_amount;
     // it picks the keyvalue and checks for the matching string
     if (order.order_type === 'Call-In') {
       totalCallInOrders += 1;
@@ -83,7 +83,7 @@ const showRevenuePage = () => {
       <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
       <div id="revenue-info"></div>`;
   // revenue-info is like a placeholder which displays the updateRevenueInfo's domstring
-  renderToDom('#homePage', domString);
+  renderToDom('#home-page', domString);
   showChart();
   // calling the api,getting all closed orders and sending it to updateRevenueInfo
   getClosedOrders().then((orders) => updateRevenueInfo(orders));
@@ -97,7 +97,6 @@ const showRevenuePage = () => {
     getClosedOrders().then((orders) => {
       const filteredOrders = orders.filter((o) => {
         const orderDate = new Date(o.timestamp);
-        console.warn(startDate);
         // https://www.tutorialspoint.com/How-to-check-whether-a-JavaScript-date-is-valid
         return (Number.isNaN(startDate.getTime()) || orderDate >= startDate)
           && (Number.isNaN(endDate.getTime()) || orderDate <= endDate);

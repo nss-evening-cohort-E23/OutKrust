@@ -6,9 +6,7 @@ const domBuilder = () => {
     <div id="navbar"></div>
   </header>
   <main>
-    <div id="itemTotals"></div>
-    <div id="homePage"></div>
-    <div id="detailItemBtns"></div>
+    <div id="home-page"></div>
 
     <div class="modal fade" id="order-modal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -18,7 +16,7 @@ const domBuilder = () => {
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <div id="orderFormDiv"></div>
+            <div id="order-form-container"></div>
           </div>
         </div>
       </div>
@@ -33,7 +31,7 @@ const domBuilder = () => {
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <div id="itemFormDiv"></div>
+            <div id="item-form-container"></div>
           </div>
         </div>
       </div>
@@ -48,7 +46,7 @@ const domBuilder = () => {
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <div id="paymentFormDiv"></div>
+            <div id="payment-form-container"></div>
           </div>
         </div>
       </div>
