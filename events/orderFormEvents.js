@@ -1,5 +1,5 @@
 import { createOrder, getSingleOrder, updateOrder } from '../api/orderData';
-import { addItems } from '../components/shared/itemForm';
+import { addItems } from '../components/forms/itemForm';
 
 const orderFormEvents = (user) => {
   document.querySelector('#order-form').addEventListener('submit', (e) => {

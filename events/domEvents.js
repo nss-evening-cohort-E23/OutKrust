@@ -6,10 +6,10 @@ import {
   updateOrder,
 } from '../api/orderData';
 import showItems from '../pages/items';
-import { itemForm } from '../components/shared/itemForm';
+import { itemForm } from '../components/forms/itemForm';
 // import paymentForm from '../components/shared/paymentForm';
 
-const domEvents = (user) => {
+function domEvents(user) {
   document.querySelector('#homePage').addEventListener('click', (e) => {
     if (e.target.id.includes('update-entry')) {
       const [, firebaseKey] = e.target.id.split('--');
@@ -57,6 +57,6 @@ const domEvents = (user) => {
       itemForm();
     }
   });
-};
+}
 
 export default domEvents;

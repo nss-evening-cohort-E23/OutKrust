@@ -1,5 +1,5 @@
 import { getAllOrders } from '../api/orderData';
-import searchBar from '../components/searchBar';
+import searchBar from '../components/shared/searchBar';
 import showCards from '../pages/cards';
 
 const searchEvents = () => {

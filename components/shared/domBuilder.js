@@ -1,4 +1,4 @@
-import renderToDom from '../utils/renderToDom';
+import renderToDom from '../../utils/renderToDom';
 
 const domBuilder = () => {
   const domString = `
