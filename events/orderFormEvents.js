@@ -14,6 +14,7 @@ const orderFormEvents = (user) => {
         order_type: document.querySelector('#order-type').value,
         items: [],
         timestamp: dateTime,
+        sub_total: 0,
         created_by: { uid: user.uid, display_name: user.displayName },
         is_open: true,
       };

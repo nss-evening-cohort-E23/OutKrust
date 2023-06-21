@@ -10,8 +10,9 @@ const orderItemFormEvents = () => {
       const [, orderNumber] = e.target.id.split('--');
       getSingleOrder(orderNumber).then((order) => {
         const itemId = document.querySelector('#menu-item').value;
-        const { items } = order;
+        let { items } = order;
         getSingleItem(itemId).then((item) => {
+          if (!items) { items = []; }
           items.push(item);
           const payload = {
             order_number: order.order_number,
