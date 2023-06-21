@@ -4,6 +4,7 @@ import logoutButton from '../components/logoutButton';
 import renderNavbar from '../components/shared/navbar';
 import domEvents from '../events/domEvents';
 import formLaunchers from '../events/formLaunchers';
+import orderItemFormEvents from '../events/itemFormEvents';
 import navbarEvents from '../events/navbarEvents';
 import orderFormEvents from '../events/orderFormEvents';
 import paymentEvents from '../events/paymentEvents';
@@ -36,15 +37,16 @@ const startApp = (user) => {
   });
 
   domBuilder();
+  domEvents();
   renderNavbar(user);
+  navbarEvents(user);
   logoutButton(); // ADD THE LOGOUT BUTTON COMPONENT
   showHomePage();
   formLaunchers();
-  navbarEvents(user);
   searchEvents();
   orderFormEvents(user);
-  domEvents();
-  paymentEvents();
+  orderItemFormEvents();
+  paymentEvents(user);
 };
 
 export default startApp;

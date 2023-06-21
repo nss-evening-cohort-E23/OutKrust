@@ -19,7 +19,7 @@ body {
   gap: 20px;
 }
 
-#homePage {
+#home-page {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -71,4 +71,8 @@ body {
   margin-top: 64px;
   margin-left: auto;
   margin-right: auto;
+}
+
+#order-card-container {
+  padding: 0px 25px;
 }

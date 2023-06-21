@@ -1,26 +1,29 @@
-import orderForm from '../components/shared/orderForm';
-import paymentForm from '../components/shared/paymentForm';
-import { itemForm } from '../components/shared/itemForm';
+import showOrderForm from '../components/shared/orderForm';
+import showPaymentForm from '../components/shared/paymentForm';
+import showItemForm from '../components/shared/itemForm';
+import { getSingleOrder } from '../api/orderData';
 
 const formLaunchers = () => {
   document.querySelector('#app').addEventListener('click', (e) => {
-    e.preventDefault();
-
     if (e.target.id.includes('nav-new-order')) {
-      orderForm({});
-    }
-
-    if (e.target.id.includes('create-order')) {
-      orderForm({});
-    }
-    if (e.target.id.includes('addItemBtn')) {
-      itemForm({});
-    }
-  });
-  document.querySelector('#detailItemBtns').addEventListener('click', (e) => {
-    if (e.target.id.includes('goPayBtn')) {
-      paymentForm({});
-      console.warn('working');
+      showOrderForm();
+    } else if (e.target.id.includes('create-order')) {
+      showOrderForm();
+    } else if (e.target.id.includes('order-update')) {
+      const [, orderNumber] = e.target.id.split('--');
+      getSingleOrder(orderNumber).then((order) => showOrderForm(order));
+    } else if (e.target.id.includes('add-item-btn')) {
+      const [, orderNumber] = e.target.id.split('--');
+      getSingleOrder(orderNumber).then((order) => showItemForm(order));
+    } else if (e.target.id.includes('edit-item-btn')) {
+      const [, orderNumber, itemId] = e.target.id.split('--');
+      getSingleOrder(orderNumber).then((order) => {
+        const orderItem = order.items.find((item) => item.item_id === itemId);
+        showItemForm(order, orderItem);
+      });
+    } else if (e.target.id.includes('go-pay-btn')) {
+      const [, orderNumber] = e.target.id.split('--');
+      getSingleOrder(orderNumber).then((order) => showPaymentForm(order));
     }
   });
 };
