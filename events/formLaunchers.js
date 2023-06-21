@@ -1,6 +1,6 @@
-import showOrderForm from '../components/shared/orderForm';
-import showPaymentForm from '../components/shared/paymentForm';
-import showItemForm from '../components/shared/itemForm';
+import showOrderForm from '../components/forms/orderForm';
+import showPaymentForm from '../components/forms/paymentForm';
+import showItemForm from '../components/forms/itemForm';
 import { getSingleOrder } from '../api/orderData';
 
 const formLaunchers = () => {

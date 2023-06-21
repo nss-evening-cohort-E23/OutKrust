@@ -1,6 +1,6 @@
 import { getAllOrders } from '../api/orderData';
-import searchBar from '../components/searchBar';
-import showCards from '../pages/cards';
+import searchBar from '../components/shared/searchBar';
+import showOrderCards from '../pages/cards';
 
 const searchEvents = () => {
   document.querySelector('#app').addEventListener('click', (e) => {
@@ -9,7 +9,7 @@ const searchEvents = () => {
     if (e.target.id.includes('search-btn')) {
       getAllOrders()
         .then((orders) => searchBar(orders, searchValue))
-        .then(showCards);
+        .then(showOrderCards);
     }
   });
 };

@@ -1,6 +1,6 @@
 import { getUser, patchUser, postUser } from '../api/userData';
-import domBuilder from '../components/domBuilder';
-import logoutButton from '../components/logoutButton';
+import domBuilder from '../components/shared/domBuilder';
+import logoutButton from '../components/shared/logoutButton';
 import renderNavbar from '../components/shared/navbar';
 import domEvents from '../events/domEvents';
 import formLaunchers from '../events/formLaunchers';

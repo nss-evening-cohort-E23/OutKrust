@@ -7,6 +7,8 @@ import {
 } from '../api/orderData';
 import showItems from '../pages/items';
 
+// import paymentForm from '../components/shared/paymentForm';
+
 const domEvents = () => {
   document.querySelector('#home-page').addEventListener('click', (e) => {
     if (e.target.id.includes('order-detail--')) {

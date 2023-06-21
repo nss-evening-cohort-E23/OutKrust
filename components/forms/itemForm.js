@@ -1,5 +1,5 @@
 import renderToDom from '../../utils/renderToDom';
-import itemList from './itemList';
+import itemList from '../shared/itemList';
 
 const showItemForm = (order, item = {}) => {
   let domString = `
