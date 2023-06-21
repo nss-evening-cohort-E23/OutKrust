@@ -2,7 +2,7 @@ import renderToDom from '../../utils/renderToDom';
 
 const showOrderForm = (order = {}) => {
   const domString = `
-// 
+
 <form id="${order.order_number ? `update-order--${order.order_number}` : 'add-order'}" class="mb-4">
   <div class="form-group">
     <label for="order-name">Order Name</label>

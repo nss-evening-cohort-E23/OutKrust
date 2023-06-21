@@ -5,7 +5,7 @@ const loginButton = () => {
   const domString = `
   <div class="d-flex flex-column justify-content-center align-items-center">
     <p id="login-text">Welcome to OutKrust</p>
-    <button id="google-auth" class="btn btn-outline-success">LOGIN</button>
+    <button id="google-auth" class="btn-outkrust">LOGIN</button>
   </div>`;
   document.querySelector('#login-form-container').className = 'flex-fill';
   document.querySelector('#login-form-container').innerHTML = domString;
