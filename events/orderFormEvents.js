@@ -23,7 +23,9 @@ const orderFormEvents = (user) => {
           const patchPayload = {
             order_number: name
           };
-          updateOrder(patchPayload);
+          updateOrder(patchPayload).then(() => {
+            getAllOrders().then((orders) => showOrderCards(orders));
+          });
         });
     } else if (e.target.id.includes('update-order')) {
       const date = new Date();
