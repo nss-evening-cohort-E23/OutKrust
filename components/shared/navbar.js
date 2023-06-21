@@ -33,8 +33,9 @@ const renderNavbar = (user) => {
       </ul>
       <div class="d-flex gap-20">
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" id="search-bar" placeholder="Search" aria-label="Search">
-          <button class="btn-outkrust" id="search-btn" type="submit">Search</button>
+
+          <input class="form-control me-2" type="search" id="search-bar" placeholder="Search Order" aria-label="Search">
+
         </form>
         <div id="logout-form-container"></div>
       </div>

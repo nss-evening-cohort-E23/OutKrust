@@ -19,8 +19,7 @@ const showOrderCards = (orders) => {
           <a href="#" class="card-link" id="order-delete--${order.order_number}">Delete</a>
         </div>
       </div>
-    </div>
-  `;
+    `;
   });
   domString += '</div>';
   renderToDom('#home-page', domString);
