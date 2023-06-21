@@ -5,8 +5,9 @@ const showItems = (order) => {
   const { items } = order;
   let itemsHtml = '';
   itemsHtml += `<h1>TOTAL: $${order.sub_total}</h1><div class="d-flex flex-row justify-content-center flex-wrap gap-2">`;
-  items.forEach((item) => {
-    itemsHtml += `
+  if (items) {
+    items.forEach((item) => {
+      itemsHtml += `
     <div class="card" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title">${item.name}</h5>
@@ -18,8 +19,8 @@ const showItems = (order) => {
         </div>
       </div>
     </div>`;
-  });
-
+    });
+  }
   itemsHtml += `</div>
   <div class="d-flex flex-row justify-content-between gap-3">
   <button class="new-card-btn" id="add-item-btn--${order.order_number}" data-bs-toggle="modal" data-bs-target="#item-modal">Add Item</button>

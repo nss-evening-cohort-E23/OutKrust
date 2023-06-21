@@ -8,7 +8,8 @@ const itemList = (itemsToExclude) => {
     <option value="">Choose Item</option>`;
   getAllItems().then((items) => {
     items.forEach((item) => {
-      const itemExists = itemsToExclude.find((ie) => ie.item_id === item.item_id);
+      const itemExists = itemsToExclude && itemsToExclude.find((ie) => ie.item_id === item.item_id);
+
       if (!itemExists) {
         itemSelect += `
             <option value="${item.item_id}">
