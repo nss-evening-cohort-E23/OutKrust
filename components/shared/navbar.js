@@ -20,10 +20,9 @@ const renderNavbar = (user) => {
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             More Options
           </a>
-          <ul class="dropdown-menu">
+          <ul id="dropdown-menu" class="dropdown-menu">
             <li><a class="dropdown-item" id="nav-menu" href="#">Menu</a></li>
             <li><a class="dropdown-item" id="nav-orders" href="#">Order History</a></li>
-            <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" id="nav-revenue" href="#">Revenue</a></li>
           </ul>
         </li>

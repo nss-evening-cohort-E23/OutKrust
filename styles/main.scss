@@ -5,9 +5,14 @@
 body {
   background-image: url("outkrustBackground.avif");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   color: brown;
   width: 100vw;
   height: 100vh;
+  font-family: monospace;
+
 }
 
 #hipHopAccordion {
@@ -100,24 +105,112 @@ body {
   padding: 0px 25px;
 }
 
-.navbar, .container-fluid, .navbar-expand, .bg-body-tertiary {
+
+#navbar {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 64px;
+}
+
+#navbar > nav > .container-fluid > .navbar-collapse > .navbar-nav > .dropdown > .dropdown-menu > li > a {
+  position: inherit;
+}
+
+.navbar {
   background-color: transparent;
   backdrop-filter: invert(80%) blur(2px);
   color: #312509;
+}
+
+#dropdown-menu {
+  background-color: transparent;
+  color: #312509;
+  border-color: transparent;
+}
+
+#dropdown-menu > li > a {
+  backdrop-filter: invert(100%) blur(20px);
+  border-radius: 4px;
+  color: antiquewhite;
+}
+
+#dropdown-menu > li > a:hover {
+  color: gainsboro;
+}
+#dropdown-menu > li > a:active {
+  color: #312509;
+}
+
+.dropdown-menu {
+  --bs-dropdown-link-hover-color: #312509;
+  --bs-dropdown-link-hover-bg: inherit;
+  --bs-dropdown-link-active-color: cornflowerblue;
+  --bs-dropdown-link-active-bg: inherit;
 }
 
 .btn-outkrust {
   padding-top: 4px;
   padding-bottom: 4px;
   background-color: transparent;
-  backdrop-filter: invert(100%) blur(20px);
+  backdrop-filter: invert(90%) blur(16px);
   width: 200px;
   border-radius: 6px;
   color: #312509;
   text-align: center;
+}
 
+.btn-outkrust:hover {
+  color: #083a3b;
+}
+
+.btn-outkrust:active {
+  color: #0a646c;
 }
 
 #search-btn {
   border-color: lightgray;
+}
+
+.modal-header, .modal-content, .modal-body, .mb-4 {
+  background-color: transparent;
+  backdrop-filter: invert(12%) blur(10px);
+}
+
+.form-group > label {
+  color:antiquewhite;
+}
+
+.form-group > input {
+  background-color: transparent;
+  color: antiquewhite;
+}
+
+.form-group > input:active, .form-group > input:focus {
+  background-color: transparent;
+  color: antiquewhite;
+}
+
+.modal-content, .modal-body {
+  border-radius: 8px;
+}
+
+#order-type {
+  background-color: transparent;
+  color: antiquewhite;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-radius: 2px;
+}
+
+#order-type > option {
+  color: #312509;
+}
+
+.form-btn-outkrust {
+  color: antiquewhite;
+}
+
+.form-btn-outkrust:hover {
+  color: coral;
+
 }
