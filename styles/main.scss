@@ -125,7 +125,7 @@ body {
 #dropdown-menu {
   background-color: transparent;
   color: #312509;
-  border-color: transparent;
+  border-color: antiquewhite;
 }
 
 #dropdown-menu > li > a {
@@ -135,7 +135,7 @@ body {
 }
 
 #dropdown-menu > li > a:hover {
-  color: gainsboro;
+  color: coral;
 }
 #dropdown-menu > li > a:active {
   color: #312509;
@@ -152,7 +152,7 @@ body {
   padding-top: 4px;
   padding-bottom: 4px;
   background-color: transparent;
-  backdrop-filter: invert(90%) blur(16px);
+  backdrop-filter: invert(72%) blur(8px);
   width: 200px;
   border-radius: 6px;
   color: #312509;
@@ -173,7 +173,7 @@ body {
 
 .modal-header, .modal-content, .modal-body, .mb-4 {
   background-color: transparent;
-  backdrop-filter: invert(12%) blur(10px);
+  backdrop-filter: invert(2%) blur(8px);
 }
 
 .form-group > label {
@@ -192,6 +192,7 @@ body {
 
 .modal-content, .modal-body {
   border-radius: 8px;
+  border: 1px solid antiquewhite;
 }
 
 #order-type {
