@@ -24,7 +24,7 @@ const showOrderForm = (order = {}) => {
     </select>
   </div>
   <div class="modal-footer">
-    <button type="submit" class="form-btn" id="submitOrder" data-bs-dismiss="modal">Submit Order</button>
+    <button type="submit" class="form-btn form-btn-outkrust btn-outkrust" id="submitOrder" data-bs-dismiss="modal">Submit Order</button>
   </div>
 </form>`;
   renderToDom('#order-form-container', domString);
