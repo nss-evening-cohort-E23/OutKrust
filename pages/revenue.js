@@ -11,6 +11,7 @@ const updateRevenueInfo = (orders) => {
     return;
   }
 
+  const chartData = {};
   // variables to hold the values
   let totalRevenue = 0;
   // here min and maxDate are kept undefined to make it get true in the if statement below
@@ -28,6 +29,9 @@ const updateRevenueInfo = (orders) => {
     totalRevenue += order.total_price;
     // new date is an inbuilt class, which converts the value of the timestamp into date format object
     const orderDate = new Date(order.timestamp);
+
+    chartData[orderDate.toDateString()] = totalRevenue;
+
     /* mindate is undefined(false) and !undefined(true). If its true it goes and takes the current value as mindate, otherwise it compares with the current date and previous mindate and prints the mindate */
     if (!minDate || orderDate < minDate) {
       minDate = orderDate;
@@ -69,6 +73,7 @@ const updateRevenueInfo = (orders) => {
   `;
   // showRevenuePage's div-id
   renderToDom('#revenue-info', domString);
+  showChart(chartData);
 };
 
 const showRevenuePage = () => {
@@ -80,11 +85,13 @@ const showRevenuePage = () => {
         <input id="end-date" class="form-control" type="datetime-local" />
         <button type='submit' id="date-range-calculate">Run</button>
       </div>
-      <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
-      <div id="revenue-info"></div>`;
+      <div class="d-flex flex-row justify-content-between align-items-center">
+        <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+        <div id="revenue-info"></div>
+      </div>`;
+
   // revenue-info is like a placeholder which displays the updateRevenueInfo's domstring
   renderToDom('#home-page', domString);
-  showChart();
   // calling the api,getting all closed orders and sending it to updateRevenueInfo
   getClosedOrders().then((orders) => updateRevenueInfo(orders));
 

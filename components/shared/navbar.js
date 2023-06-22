@@ -1,10 +1,13 @@
 import renderToDom from '../../utils/renderToDom';
+import logo from '../../styles/logo.png';
 
 const renderNavbar = (user) => {
   const navbarString = `
   <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">OutKrust</a>
+    <div class="logo-div-main">
+     <img src=${logo} class="nav-logo" alt="OutKrust Pizza and Wangs Logo">
+    </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

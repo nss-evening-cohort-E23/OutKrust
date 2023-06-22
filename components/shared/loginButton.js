@@ -1,10 +1,11 @@
 import { signIn } from '../../utils/auth';
+import logo from '../../styles/logo.png';
 
 // GOOGLE LOGIN BUTTON
 const loginButton = () => {
   const domString = `
   <div class="d-flex flex-column justify-content-center align-items-center">
-    <p id="login-text">Welcome to OutKrust</p>
+    <img src=${logo} class="login-logo" alt="OutKrust Pizza and Wangs Logo">
     <button id="google-auth" class="btn-outkrust">LOGIN</button>
   </div>`;
   document.querySelector('#login-form-container').className = 'flex-fill';
