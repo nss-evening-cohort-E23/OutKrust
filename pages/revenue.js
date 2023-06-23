@@ -54,17 +54,17 @@ const updateRevenueInfo = (orders) => {
   });
 
   const domString = `
-    <div class="d-flex flex-column justify-content-center align-items-center">
-      <h1 class="page-title">REVENUE</h1>
-      <h1 class="page-title">TOTAL REVENUE: ${totalRevenue}</h1>
-      <h4 class="page-title">Order Date Range: ${minDate.toLocaleDateString()} to ${maxDate.toLocaleDateString()}</h4>
-      <h4 class="page-title">Total Tips: ${totalTip}</h4>
-      <h4 class="page-title">Total call-in orders: ${totalCallInOrders}</h4>
-      <h4 class="page-title">Total walk-in orders: ${totalWalkInOrders}</h4>
-      <h3 class="page-title">Payment Types:</h3>
-      <h3 class="page-title">Cash - ${totalCashPayments}</h3>
-      <h3 class="page-title">Credit - ${totalCreditPayments}</h3>
-      <h3 class="page-title">Mobile - ${totalMobilePayments}</h3>
+    <div class="d-flex flex-column justify-content-left align-items-left">
+      <p class="page-title" id="revTitle">REVENUE</p>
+      <p class="page-title" id="subtitleRev">Total Revenue: $${totalRevenue}</p>
+      <p class="page-title" id="subtitleRev">Order Date Range:</p><p class="page-title">${minDate.toLocaleDateString()} to ${maxDate.toLocaleDateString()}</p>
+      <p class="page-title" id="subtitleRev">Total Tips:</p><p>$${totalTip}</p>
+      <p class="page-title" id="subtitleRev">Total call-in orders:</p><p>$${totalCallInOrders}</p>
+      <p class="page-title" id="subtitleRev">Total walk-in orders:</p><p>$${totalWalkInOrders}</p>
+      <p class="page-title" id="payTypes">Payment Types:</p>
+      <p class="page-title">Cash - ${totalCashPayments}</p>
+      <p class="page-title">Credit - ${totalCreditPayments}</p>
+      <p class="page-title">Mobile - ${totalMobilePayments}</p>
     </div>
   `;
   // showRevenuePage's div-id
@@ -75,9 +75,9 @@ const showRevenuePage = () => {
   const domString = `
       <div id="date-range" class="d-flex flex-row justify-content-center align-items-center gap-20">
         <label for="start-date">Start Date: </label>
-        <input id="start-date" class="form-control" type="datetime-local" />
+        <input id="start-date" class="range-text" type="datetime-local" />
         <label for="end-date">End Date: </label>
-        <input id="end-date" class="form-control" type="datetime-local" />
+        <input id="end-date" class="range-text" type="datetime-local" />
         <button type='submit' id="date-range-calculate">Run</button>
       </div>
       <canvas id="myChart" style="width:100%;max-width:700px"></canvas>

@@ -11,8 +11,8 @@ const showChart = () => {
       datasets: [{
         fill: false,
         lineTension: 0,
-        backgroundColor: 'rgba(0,0,255,1.0)',
-        borderColor: 'rgba(0,0,255,0.1)',
+        backgroundColor: 'rgb(49, 37, 9)',
+        borderColor: 'rgb(49, 37, 9)',
         data: yValues
       }]
     },
