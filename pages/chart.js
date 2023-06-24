@@ -1,7 +1,12 @@
 import { Chart } from 'chart.js/auto';
 
+let chart = null;
 const showChart = (chartData) => {
-  const chart = new Chart('myChart', {
+  if (chart) {
+    chart.clear();
+    chart.destroy();
+  }
+  chart = new Chart('myChart', {
     type: 'bar',
     data: {
       labels: Object.keys(chartData),
