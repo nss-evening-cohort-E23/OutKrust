@@ -59,8 +59,7 @@ const updateRevenueInfo = (orders) => {
 
   const domString = `
     <div class="d-flex flex-column justify-content-center align-items-center">
-      <h1 class="page-title">REVENUE</h1>
-      <h1 class="page-title">TOTAL REVENUE: ${totalRevenue}</h1>
+      <h1 class="page-title">REVENUE: ${totalRevenue}</h1>
       <h4 class="page-title">Order Date Range: ${minDate.toLocaleDateString()} to ${maxDate.toLocaleDateString()}</h4>
       <h4 class="page-title">Total Tips: ${totalTip}</h4>
       <h4 class="page-title">Total call-in orders: ${totalCallInOrders}</h4>

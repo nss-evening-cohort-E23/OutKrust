@@ -13,10 +13,10 @@ const showOrderCards = (orders) => {
         <h8 class="card-order-type">${order.order_type}</h8>
         <div class="d-flex flex-row justify-content-between">
           <div>
-            <a href="#" class="card-link" id="order-detail--${order.order_number}">Detail</a>
-            <a href="#" class="card-link" id="order-update--${order.order_number}" data-bs-toggle="modal" data-bs-target="#order-modal">Edit</a>
+          <i class="fa fa-solid fa-info-circle" id="order-detail--${order.order_number}"></i>
+            <i class="fa fa-solid fa-pen" data-bs-toggle="modal" data-bs-target="#order-modal" id="order-update--${order.order_number}" data-bs-toggle="modal" data-bs-target="#order-modal"></i>
           </div>
-          <a href="#" class="card-link" id="order-delete--${order.order_number}">Delete</a>
+          <i class="fa fa-solid fa-trash" id="order-delete--${order.order_number}"></i>
         </div>
       </div>
     `;
