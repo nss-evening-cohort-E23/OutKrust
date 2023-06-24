@@ -63,8 +63,8 @@ const updateRevenueInfo = (orders) => {
       <p class="page-title" id="subtitleRev">Total Revenue: $${totalRevenue}</p>
       <p class="page-title" id="subtitleRev">Order Date Range:</p><p class="page-title">${minDate.toLocaleDateString()} to ${maxDate.toLocaleDateString()}</p>
       <p class="page-title" id="subtitleRev">Total Tips:</p><p>$${totalTip}</p>
-      <p class="page-title" id="subtitleRev">Total call-in orders:</p><p>$${totalCallInOrders}</p>
-      <p class="page-title" id="subtitleRev">Total walk-in orders:</p><p>$${totalWalkInOrders}</p>
+      <p class="page-title" id="subtitleRev">Total call-in orders:</p><p>${totalCallInOrders}</p>
+      <p class="page-title" id="subtitleRev">Total walk-in orders:</p><p>${totalWalkInOrders}</p>
       <p class="page-title" id="payTypes">Payment Types:</p>
       <p class="page-title">Cash - ${totalCashPayments}</p>
       <p class="page-title">Credit - ${totalCreditPayments}</p>

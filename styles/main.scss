@@ -21,6 +21,8 @@ body {
 
 .nav-link, #nav-home {
   color: antiquewhite;
+  --bs-navbar-active-color: coral;
+  --bs-nav-link-disabled-color: coral;
 }
 
 .nav-link:hover, #nav-home:hover {
@@ -29,6 +31,14 @@ body {
 
 .nav-link:active, #nav-home:active {
   color: #0a646c;
+  --bs-navbar-active-color: coral;
+  --bs-nav-link-disabled-color: coral;
+}
+
+.nav-item, #nav-user {
+  --bs-navbar-active-color: coral;
+  --bs-nav-link-disabled-color: coral;
+  --bs-nav-link-hover-color: coral;
 }
 
 .gap-20 {
@@ -106,6 +116,7 @@ body {
   position: relative;
   z-index: 1;
   margin-bottom: 64px;
+  --bs-navbar-active-color: coral;
 }
 
 #navbar > nav > .container-fluid > .navbar-collapse > .navbar-nav > .dropdown > .dropdown-menu > li > a {
@@ -115,19 +126,8 @@ body {
 .navbar {
   background-color: #151a16;
   color: antiquewhite;
+  --bs-navbar-active-color: coral;
 }
-
-
-#navbar {
-  position: relative;
-  z-index: 1;
-  margin-bottom: 64px;
-}
-
-#navbar > nav > .container-fluid > .navbar-collapse > .navbar-nav > .dropdown > .dropdown-menu > li > a {
-  position: inherit;
-}
-
 
 
 #dropdown-menu {
@@ -145,7 +145,7 @@ body {
   color: coral;
 }
 #dropdown-menu > li > a:active {
-  color: #312509;
+  color: coral;
 }
 
 .dropdown-menu {
@@ -162,7 +162,6 @@ body {
 }
 
 #dropdown-menu > li > a {
-  backdrop-filter: invert(100%) blur(20px);
   border-radius: 4px;
   color: antiquewhite;
 }
@@ -171,7 +170,7 @@ body {
   color: coral;
 }
 #dropdown-menu > li > a:active {
-  color: #312509;
+  color: coral;
 }
 
 .dropdown-menu {

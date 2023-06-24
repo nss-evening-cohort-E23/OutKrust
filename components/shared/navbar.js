@@ -24,7 +24,6 @@ const renderNavbar = (user) => {
             More Options
           </a>
           <ul id="dropdown-menu" class="dropdown-menu">
-            <li><a class="dropdown-item" id="nav-menu" href="#">Menu</a></li>
             <li><a class="dropdown-item" id="nav-orders" href="#">Order History</a></li>
             <li><a class="dropdown-item" id="nav-revenue" href="#">Revenue</a></li>
           </ul>
