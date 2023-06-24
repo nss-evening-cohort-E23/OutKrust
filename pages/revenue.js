@@ -85,7 +85,7 @@ const showRevenuePage = () => {
         <input id="end-date" class="range-text" type="datetime-local" />
         <button type='submit' id="date-range-calculate">Run</button>
       </div>
-      <div class="d-flex flex-row justify-content-between align-items-center">
+      <div class="outkrust-revenue d-flex flex-column justify-content-between align-items-center">
         <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
         <div id="revenue-info"></div>
       </div>`;
