@@ -19,7 +19,7 @@ const showPaymentForm = (order = {}) => {
     </div>
     
     <div class="modal-footer">
-      <button type="submit" class="form-btn" id="close-order" data-bs-dismiss="modal">Close Order</button>
+      <button type="submit" class="form-btn form-btn-outkrust btn-outkrust" id="close-order" data-bs-dismiss="modal">Close Order</button>
     </div>
   </form>
   `;
