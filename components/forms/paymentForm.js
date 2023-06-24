@@ -4,7 +4,7 @@ const showPaymentForm = (order = {}) => {
   const domString = `
   <form id="payment--${order.order_number}" class="mb-4">
   
-    <div class="form-group">
+    <div class="form-group pay-form">
     <label for="pay-type">Payment Type</label>
     <select id="pay-type" name="paymentOption" value="${order.payment_method || ''}" required>
       <option value="Credit Card" ${order.payment_method === 'Credit Card' ? 'selected' : ''}>Credit Card</option>

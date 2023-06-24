@@ -417,3 +417,13 @@ body {
 .fa:hover {
   cursor: pointer;
 }
+
+#pay-type, .pay-form > select {
+  background-color: transparent;
+  color: antiquewhite;
+  border-radius: 2px;
+}
+
+#pay-type > option {
+  color: #312509;
+}
