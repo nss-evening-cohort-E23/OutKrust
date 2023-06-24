@@ -3,35 +3,15 @@
 
 
 body {
-  background-image: url("outkrustBackground.avif");
+  background-color: #0d2c2c;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  color: brown;
+  color: antiquewhite;
   width: 100vw;
   height: 100vh;
   font-family: monospace;
-
-  font-family: monospace;
-
-}
-
-#hipHopAccordion {
-  background-color: transparent;
-  color: transparent;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 120px;
-}
-
-.hip-hop {
-  background-color: transparent;
-  color: transparent;
 }
 
 #app {
@@ -39,6 +19,17 @@ body {
   flex-direction: column;
 }
 
+.nav-link, #nav-home {
+  color: antiquewhite;
+}
+
+.nav-link:hover, #nav-home:hover {
+  color: coral;
+}
+
+.nav-link:active, #nav-home:active {
+  color: #0a646c;
+}
 
 .gap-20 {
   gap: 20px;
@@ -55,10 +46,9 @@ body {
 
 #home-page > h1 {
   background-color: transparent;
-  backdrop-filter: invert(80%) blur(1px);
   padding: 18px 120px;
   border-radius: 16px;
-  color: #312509;
+  color: antiquewhite;
   margin-bottom: 64px;
   
 }
@@ -97,8 +87,8 @@ body {
 
 .employee-page {
   text-align: center;
-  color: darkred;
-  border: 8px solid darkred;
+  color: antiquewhite;
+  border: 8px solid antiquewhite;
   border-radius: 16px;
   padding: 32px 128px;
   margin-top: 64px;
@@ -107,6 +97,7 @@ body {
 }
 
 #order-card-container {
+
   padding: 0px 25px;
 }
 
@@ -122,6 +113,10 @@ body {
 }
 
 .navbar {
+  background-color: #151a16;
+  color: antiquewhite;
+}
+
 
 #navbar {
   position: relative;
@@ -133,20 +128,15 @@ body {
   position: inherit;
 }
 
-.navbar {
-  background-color: transparent;
-  backdrop-filter: invert(80%) blur(2px);
-  color: #312509;
-}
+
 
 #dropdown-menu {
   background-color: transparent;
-  color: #312509;
+  color: antiquewhite;
   border-color: antiquewhite;
 }
 
 #dropdown-menu > li > a {
-  backdrop-filter: invert(100%) blur(20px);
   border-radius: 4px;
   color: antiquewhite;
 }
@@ -222,7 +212,7 @@ body {
 
 .modal-header, .modal-content, .modal-body, .mb-4 {
   background-color: transparent;
-  backdrop-filter: invert(2%) blur(8px);
+  backdrop-filter: invert(20%) blur(40px);
 }
 
 .form-group > label {
@@ -302,7 +292,6 @@ body {
   color: coral;
 }
 
-
 .login-logo {
   width: 475px;
   margin-bottom: 10px;
@@ -313,6 +302,33 @@ body {
 
 }
 
+.card {
+  background-color: #151a16;
+  color: antiquewhite;
+}
+
+.card-link {
+  color: #0a646c;
+  text-shadow: 0px 0px 2px;
+}
+
+.card-link:hover {
+  color: coral;
+  cursor: pointer;
+}
+
+.card-link:active {
+  color: antiquewhite;
+}
+
+.new-card-btn {
+  color: antiquewhite;
+  text-shadow: 0px 0px 0px;
+}
+
+.new-card-btn:active {
+  color: #0a646c;
+=======
 #myChart {
   background-color: transparent;
   backdrop-filter: invert(72%) blur(8px);
