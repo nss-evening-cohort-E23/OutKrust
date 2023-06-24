@@ -29,7 +29,6 @@ const updateRevenueInfo = (orders) => {
     totalRevenue += order.total_price;
     // new date is an inbuilt class, which converts the value of the timestamp into date format object
     const orderDate = new Date(order.timestamp);
-
     chartData[orderDate.toDateString()] = totalRevenue;
 
     /* mindate is undefined(false) and !undefined(true). If its true it goes and takes the current value as mindate, otherwise it compares with the current date and previous mindate and prints the mindate */
@@ -99,7 +98,7 @@ const showRevenuePage = () => {
     const startDate = new Date(document.querySelector('#start-date').value);
     // https://bobbyhadz.com/blog/javascript-add-1-day-to-date
     const endDate = new Date(document.querySelector('#end-date').value);
-    endDate.setDate(endDate.getDate() + 1);
+    endDate.setDate(endDate.getDate());
 
     getClosedOrders().then((orders) => {
       const filteredOrders = orders.filter((o) => {
