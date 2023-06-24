@@ -8,9 +8,14 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   color: brown;
   width: 100vw;
   height: 100vh;
+  font-family: monospace;
+
   font-family: monospace;
 
 }
@@ -117,9 +122,47 @@ body {
 }
 
 .navbar {
+
+#navbar {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 64px;
+}
+
+#navbar > nav > .container-fluid > .navbar-collapse > .navbar-nav > .dropdown > .dropdown-menu > li > a {
+  position: inherit;
+}
+
+.navbar {
   background-color: transparent;
   backdrop-filter: invert(80%) blur(2px);
   color: #312509;
+}
+
+#dropdown-menu {
+  background-color: transparent;
+  color: #312509;
+  border-color: antiquewhite;
+}
+
+#dropdown-menu > li > a {
+  backdrop-filter: invert(100%) blur(20px);
+  border-radius: 4px;
+  color: antiquewhite;
+}
+
+#dropdown-menu > li > a:hover {
+  color: coral;
+}
+#dropdown-menu > li > a:active {
+  color: #312509;
+}
+
+.dropdown-menu {
+  --bs-dropdown-link-hover-color: #312509;
+  --bs-dropdown-link-hover-bg: inherit;
+  --bs-dropdown-link-active-color: cornflowerblue;
+  --bs-dropdown-link-active-bg: inherit;
 }
 
 #dropdown-menu {
@@ -153,10 +196,16 @@ body {
   padding-bottom: 4px;
   background-color: transparent;
   backdrop-filter: invert(72%) blur(8px);
+  backdrop-filter: invert(72%) blur(8px);
   width: 200px;
   border-radius: 6px;
   color: #312509;
   text-align: center;
+}
+
+.btn-outkrust:hover {
+  color: #083a3b;
+}
 }
 
 .btn-outkrust:hover {
@@ -206,7 +255,45 @@ body {
 #order-type > option {
   color: #312509;
 }
+.modal-header, .modal-content, .modal-body, .mb-4 {
+  background-color: transparent;
+  backdrop-filter: invert(2%) blur(8px);
+}
 
+.form-group > label {
+  color:antiquewhite;
+}
+
+.form-group > input {
+  background-color: transparent;
+  color: antiquewhite;
+}
+
+.form-group > input:active, .form-group > input:focus {
+  background-color: transparent;
+  color: antiquewhite;
+}
+
+.modal-content, .modal-body {
+  border-radius: 8px;
+  border: 1px solid antiquewhite;
+}
+
+#order-type {
+  background-color: transparent;
+  color: antiquewhite;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-radius: 2px;
+}
+
+#order-type > option {
+  color: #312509;
+}
+
+.form-btn-outkrust {
+  color: antiquewhite;
+}
 .form-btn-outkrust {
   color: antiquewhite;
 }
