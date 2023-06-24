@@ -29,18 +29,17 @@ const orderFormEvents = (user) => {
           });
         });
     } else if (e.target.id.includes('update-order')) {
-      const date = new Date();
-      const dateTime = date.toLocaleString();
       const [, orderNumber] = e.target.id.split('--');
       const payload = {
         order_number: orderNumber,
         name: document.querySelector('#order-name').value,
         customer_phone: document.querySelector('#order-phone').value,
         customer_email: document.querySelector('#order-email').value,
-        order_type: document.querySelector('#order-type').value,
-        timestamp: dateTime,
+        order_type: document.querySelector('#order-type').value
       };
-      updateOrder(payload);
+      updateOrder(payload).then(() => {
+        getAllOrders().then(showOrderCards);
+      });
     }
   });
 };

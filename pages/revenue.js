@@ -25,7 +25,7 @@ const updateRevenueInfo = (orders) => {
   let totalMobilePayments = 0;
 
   // checks each item in the orders database
-  orders.forEach((order) => {
+  orders.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp)).forEach((order) => {
     totalRevenue += order.total_price;
     // new date is an inbuilt class, which converts the value of the timestamp into date format object
     const orderDate = new Date(order.timestamp);
