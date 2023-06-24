@@ -14,8 +14,8 @@ const showItems = (order) => {
         <h6 class="lang">$${item.price}</h6>
         <hr>
         <div class="d-flex flex-row justify-content-between">
-          <a class="card-link" id="edit-item-btn--${order.order_number}--${item.item_id}" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#item-modal">Edit Item</a>
-          <a class="card-link" id="delete-item-btn--${order.order_number}--${item.item_id}" class="btn btn-danger">Delete Item</a>
+        <i class="fa fa-solid fa-pen" id="edit-item-btn--${order.order_number}--${item.item_id}" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#item-modal"></i>
+        <i class="fa fa-solid fa-trash" id="delete-item-btn--${order.order_number}--${item.item_id}" class="btn btn-danger"></i>
         </div>
       </div>
     </div>`;
