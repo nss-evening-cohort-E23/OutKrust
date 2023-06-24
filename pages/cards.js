@@ -1,10 +1,14 @@
 import renderToDom from '../utils/renderToDom';
+import logo from '../styles/logo.png';
 
 const showOrderCards = (orders) => {
   let domString = '<div id="order-card-container" class="d-flex flex-row justify-content-center flex-wrap gap-2">';
   orders.forEach((order) => {
     domString += `
     <div class="card" style="width: 18rem;">
+      <div class="logo-div-main">
+        <img src=${logo} class="nav-logo" alt="OutKrust Pizza and Wangs Logo">
+      </div>
       <div class="card-body d-flex flex-column">
         <h5 class="card-name">${order.name}</h5>
         <h6 class="card-phone">${order.customer_phone}</h6>
@@ -19,6 +23,7 @@ const showOrderCards = (orders) => {
           <a href="#" class="card-link" id="order-delete--${order.order_number}">Delete</a>
         </div>
       </div>
+    </div>
     `;
   });
   domString += '</div>';
