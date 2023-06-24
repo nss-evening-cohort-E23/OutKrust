@@ -10,7 +10,7 @@ const showItemForm = (order, item = {}) => {
       <div class="form-group" id="select-item">
       </div>
       <div class="modal-footer">
-        <button type="submit" class="form-btn form-btn-outkrust btn-outkrust" data-bs-dismiss="modal">Submit</button>
+        <button type="submit" class="form-btn form-btn-outkrust btn-outkrust" data-bs-dismiss="modal">Submit Item</button>
       </div>
       `;
     domString += '</form>';
