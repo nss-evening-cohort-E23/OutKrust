@@ -12,7 +12,7 @@ const itemList = (itemsToExclude) => {
 
       if (!itemExists) {
         itemSelect += `
-            <option value="${item.item_id}">
+            <option class="item-option" value="${item.item_id}">
                 ${item.name}
             </option>`;
       }
